@@ -33,7 +33,7 @@ const Numeralia = () => {
                     <br />
                     <p>En total SAĀMA tiene 3,692 m2 de construcción,</p>
                     <p>distribuidos en un desarrollo de 10 niveles</p>
-                    <p>con 14 amenidades.</p>
+                    <p>con 12 amenidades.</p>
                 </div>
             </motion.div>
             <AniLink cover bg="#2E331E" direction="up" to='/amenidades'>
