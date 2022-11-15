@@ -7,9 +7,6 @@
   "keywords": [
     "gatsby"
   ],
-  "engines": {
-    "node": ">=18.0.0"
-  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -20,7 +17,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
     "framer-motion": "^7.6.5",
-    "gatsby": "^4.24.0",
+    "gatsby": "^5.0.0",
     "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
     "gatsby-plugin-sharp": "^5.0.0",
@@ -36,5 +33,8 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.6"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+}
 }
