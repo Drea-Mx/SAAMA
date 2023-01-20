@@ -33,7 +33,7 @@ const Home = () => {
                 transition={{ delay: 1, duration: 0.5 }}
             >
                 <h2>DEPARTAMENTOS DESDE 8.6 MDP</h2>
-                <h2>ENTREGA MAYO 2024</h2>
+                <h2>ENTREGA DICIEMBRE 2024</h2>
                 <AniLink cover bg="#2E331E" direction="up" to='/concepto'>
                 ↓
                 </AniLink>
