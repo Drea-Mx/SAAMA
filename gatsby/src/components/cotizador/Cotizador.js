@@ -1,10 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import { motion } from "framer-motion"
 import { StaticImage } from "gatsby-plugin-image"
 import Depa from './modales/Depa'
 
 const Cotizador = () => {
+
+    const [depa01, setDepa01] = useState(false);
+
+
     return(
         <CotizadorContainer>
             <motion.div  
@@ -24,7 +28,7 @@ const Cotizador = () => {
                         style={{ height: "100%", width: "100%" }}
                     />
                     <div className='buttons'>
-                        <button className='depa01'></button>
+                        <button onClick={() => setDepa01(!depa01)} className='depa01'></button>
                     </div>
                 </div>
             </motion.div>
@@ -38,32 +42,37 @@ const Cotizador = () => {
             </motion.div>
 
             <div className='depas'>
-                <Depa 
-                    arr={
-                        [
-                            'Cocina', 
-                            'Alacena', 
-                            'Comedor', 
-                            'Sala',
-                            'Terraza',
-                            'Piscina',
-                            'Baño de visitas',
-                            'Recámara A',
-                            'Clóset A',
-                            'Baño A',
-                            'Recámara B',
-                            'Clóset B',
-                            'Baño B',
-                            'Recámara C',
-                            'Vestidor C',
-                            'Baño C',
-                            'Jardín interior',
-                            'Terraza con jacuzzi',
-                            'Cuarto de lavado',
-                            'Baño de servicio',
-                        ]
-                    } 
-                />
+                {depa01 ? 
+                    <Depa 
+                        arr={
+                            [
+                                'Cocina', 
+                                'Alacena', 
+                                'Comedor', 
+                                'Sala',
+                                'Terraza',
+                                'Piscina',
+                                'Baño de visitas',
+                                'Recámara A',
+                                'Clóset A',
+                                'Baño A',
+                                'Recámara B',
+                                'Clóset B',
+                                'Baño B',
+                                'Recámara C',
+                                'Vestidor C',
+                                'Baño C',
+                                'Jardín interior',
+                                'Terraza con jacuzzi',
+                                'Cuarto de lavado',
+                                'Baño de servicio',
+                            ]
+                        } 
+                    />
+            :
+            ''
+                }
+                
             </div>
         </CotizadorContainer>
     )
