@@ -3,10 +3,56 @@ import styled from 'styled-components'
 import { motion } from "framer-motion"
 import { StaticImage } from "gatsby-plugin-image"
 import Depa from './modales/Depa'
+import App from './Cont'
 
 const Cotizador = () => {
 
     const [depa01, setDepa01] = useState(false);
+
+    const depa1 = {
+        titulo: 'DEPARTAMENTO 001',
+        arr: [
+            'Cocina', 
+            'Alacena', 
+            'Comedor', 
+            'Sala',
+            'Terraza',
+            'Piscina',
+            'Baño de visitas',
+            'Recámara A',
+            'Clóset A',
+            'Baño A',
+            'Recámara B',
+            'Clóset B',
+            'Baño B',
+            'Recámara C',
+            'Vestidor C',
+            'Baño C',
+            'Jardín interior',
+            'Terraza con jacuzzi',
+            'Cuarto de lavado',
+            'Baño de servicio',
+        ],
+        plano: '/001.png',
+        precio: '10,913,760.00',
+        codigoDepa: '001',
+        nivel: 'Planta Baja',
+        cajones: '2',
+        espacios1: [
+            'Interior: 200.76 m²',
+            'Bodega: 1.19 m²',
+            'Balcón: 66.44 m²',
+            'Piscina: 16.20 m²',
+            'Patio servicio: 2.66 m²',
+            'Pérgola: N/A',
+            'Servicio: N/A',
+        ],
+        espacios2: [
+            'Techados: 201.95 m²',
+            'No techado: 84 m²',
+            'Total: 285.95 m²',
+        ],
+    }
 
 
     return(
@@ -28,7 +74,7 @@ const Cotizador = () => {
                         style={{ height: "100%", width: "100%" }}
                     />
                     <div className='buttons'>
-                        <button onClick={() => setDepa01(!depa01)} className='depa01'></button>
+                        <button onClick={() => setDepa01(!depa01)} className='depa01'>button</button>
                     </div>
                 </div>
             </motion.div>
@@ -39,35 +85,35 @@ const Cotizador = () => {
                 transition={{ duration: 0.5 }}
             >
                 <h2>FINANCIAMIENTO</h2>
+                <div className='datos'>
+                    <div className='item'>
+                        <h2>$20,000</h2>
+                        <p>para apartar la unidad</p>
+                    </div>
+                    <div className='item'>
+                        <h2>15%</h2>
+                        <p>enganche</p>
+                    </div>
+                    <div className='item'>
+                        <h2>35%</h2>
+                        <p>diferido</p>
+                    </div>
+                    <div className='item'>
+                        <h2>50%</h2>
+                        <p>saldo contra entrega</p>
+                    </div>
+                </div>
+                <div className='counter'>
+                    <App />
+                </div>
             </motion.div>
 
             <div className='depas'>
                 {depa01 ? 
                     <Depa 
-                        arr={
-                            [
-                                'Cocina', 
-                                'Alacena', 
-                                'Comedor', 
-                                'Sala',
-                                'Terraza',
-                                'Piscina',
-                                'Baño de visitas',
-                                'Recámara A',
-                                'Clóset A',
-                                'Baño A',
-                                'Recámara B',
-                                'Clóset B',
-                                'Baño B',
-                                'Recámara C',
-                                'Vestidor C',
-                                'Baño C',
-                                'Jardín interior',
-                                'Terraza con jacuzzi',
-                                'Cuarto de lavado',
-                                'Baño de servicio',
-                            ]
-                        } 
+                        depa01={depa01}
+                        setDepa01={setDepa01}
+                        depaInfo={depa1}
                     />
             :
             ''
@@ -84,6 +130,7 @@ const CotizadorContainer = styled.section`
     padding: 0 50px;
     @media (max-width: 850px) {
         margin-top: 150px;
+        flex-direction: column;
     }
     @media (max-width: 780px) {
         margin-top: 100px;
@@ -91,6 +138,10 @@ const CotizadorContainer = styled.section`
     .edificio {
         width: 50%;
         text-align: center;
+        @media (max-width: 850px) {
+            width: 100%;
+            margin-top: 50px;
+        }
         p {
             font-size: 28px;
         }
@@ -107,6 +158,7 @@ const CotizadorContainer = styled.section`
                 button {
                     position: absolute;
                     mix-blend-mode: multiply;
+                    font-size: 0;
                 }
                 .depa01 {
                     width: 113px;
@@ -121,6 +173,30 @@ const CotizadorContainer = styled.section`
     .financiamiento {
         width: 50%;
         text-align: center;
+        @media (max-width: 850px) {
+            width: 100%;
+            margin-bottom: 200px;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        .datos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 50px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            .item {
+                h2 {
+                    font-size: 2.5rem;
+                }
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
     }
 `
 

@@ -1,27 +1,29 @@
 import React from 'react'
-import { StaticImage } from "gatsby-plugin-image"
 import styled from 'styled-components'
 
-const Depa = ({arr}) => {
+const Depa = ({depaInfo, depa01, setDepa01}) => {
+
+    const image = depaInfo.plano
+
     return(
+        <>
+        {depa01 ? 
+
         <Container>
+            
             <div className='modal'>
-                <h2>DEPARTAMENTO 001</h2>
+                <button className='close' onClick={() => setDepa01(!depa01)}>x</button>
+                <h2>{depaInfo.titulo}</h2>
                 <div className='sections'>
                     <div className='iz'>
                         <div className='image'>
-                            <StaticImage 
-                                src="001.png" 
-                                alt="Depa 001" 
-                                layout="fullWidth"
-                                placeholder="blurred"
-                            />
+                            <img src={image} alt='plano' />
                         </div>
                         <div className='info'>
                             <div className='area'>
                                 <h2>Áreas</h2>
                                 <ul>
-                                    {arr.map((title) => {
+                                    {depaInfo.arr.map((title) => {
                                         return <li key={title}>{title}</li>;
                                     })}
                                 </ul>
@@ -29,22 +31,18 @@ const Depa = ({arr}) => {
                             <div className='esp'>
                                     <h2>ESPECIFICACIONES</h2>
                                     <ul>
-                                        <li>Nivel: Planta Baja</li>
-                                        <li>Cajones: 2</li>
+                                        <li>Nivel: {depaInfo.nivel}</li>
+                                        <li>Cajones: {depaInfo.cajones}</li>
                                     </ul>
                                     <ul>
-                                        <li>Interior: 200.76 m²</li>
-                                        <li>Bodega: 1.19 m²</li>
-                                        <li>Balcón: 66.44 m²</li>
-                                        <li>Piscina: 16.20 m²</li>
-                                        <li>Patio servicio: 2.66 m²</li>
-                                        <li>Pérgola: N/A</li>
-                                        <li>Servicio: N/A</li>
+                                        {depaInfo.espacios1.map((espacio) => {
+                                            return <li key={espacio}>{espacio}</li>;
+                                        })}
                                     </ul>
                                     <ul>
-                                        <li>Techados: 201.95 m²</li>
-                                        <li>No techado: 84 m²</li>
-                                        <li>Total: 285.95 m²</li>
+                                        {depaInfo.espacios2.map((espacio2) => {
+                                            return <li key={espacio2}>{espacio2}</li>;
+                                        })}
                                     </ul>
                             </div>
                         </div>
@@ -52,11 +50,12 @@ const Depa = ({arr}) => {
                     <div className='de'>
                         <div className='top'>
                             <h3>Precio de venta</h3>
-                            <h3>$10,913,760.00</h3>
+                            <h3>${depaInfo.precio}</h3>
                         </div>
                         <div className='bot'>
                             <p>Si te interesa este departamento envía un mensaje desde nuestro formulario y uno de nuestros asesores se pondrá en contacto contigo:</p>
                             <form>
+                                <input type="hidden"  placeholder='Nombre' name='nombreDepa' value={depaInfo.codigoDepa} />
                                 <input type='text' placeholder='Nombre' name='nombre' />
                                 <input type='email' placeholder='Correo electrónico' name='email' />
                                 <div className='mitad'>
@@ -71,7 +70,12 @@ const Depa = ({arr}) => {
                 </div>
                 
             </div>
+            
         </Container>
+        :
+            ''
+            }
+        </>
     )
 }
 
@@ -87,14 +91,28 @@ const Container = styled.section`
     align-items: center;
     z-index: 5;
     padding: 20px;
+    
     .modal {
         background-color: #EBE6DC;
         width: 100%;
         max-width: 1500px;
         padding: 50px;
         box-sizing: border-box;
-        height: 80vh;
+        height: auto;
         border-radius: 20px;
+        overflow: scroll;
+        position: relative;
+        @media (max-width: 850px) {
+            height: 90vh;
+            overflow-y: scroll;
+        }
+        button.close {
+            font-weight: bolder;
+            font-size: 40px;
+            position: absolute;
+            top: 30px;
+            right: 40px;
+        }
         h2 {
             text-align: center;
         }
@@ -102,25 +120,54 @@ const Container = styled.section`
             display: flex;
             height: 100%;
             padding-top: 50px;
+            @media (max-width: 850px) {
+                flex-direction: column;
+            }
             .iz {
                 width: 60%;
                 padding-right: 50px;
                 height: 100%;
                 display: grid;
                 grid-template-columns: 1fr;
+                @media (max-width: 850px) {
+                    width: 100%;
+                    padding-right: 0;
+
+                }
                 .image {
                     width: auto;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    margin-bottom: 100px;
+                    @media (max-width: 850px) {
+                        margin-bottom: 50px;
+                    }
                 }
                 .info {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     grid-gap: 20px;
+                    @media (max-width: 650px) {
+                        grid-template-columns: 1fr;
+                    }
                     .area {
                         ul {
                             width: 250px;
+                            @media (max-width: 1000px) {
+                                width: 200px;
+                                li {
+                                    margin-right: 10px;
+                                }
+                            }
+                            @media (max-width: 850px) {
+                                width: 250px;
+                            }
+                            @media (max-width: 650px) {
+                                li {
+                                    margin-right: 20px;
+                                }
+                            }
                         }
                     }
                     .esp {
@@ -154,7 +201,18 @@ const Container = styled.section`
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                @media (max-width: 850px) {
+                    width: 100%;
+                    padding-bottom: 50px;
+
+                }
                 .top {
+                    margin-bottom: 100px;
+                    @media (max-width: 850px) {
+                        text-align: center;
+                        margin-top: 50px;
+                        margin-bottom: 50px;
+                    }
                     h3 {
                         font-size: 2rem;
                         font-family: var(--slim);
@@ -178,6 +236,9 @@ const Container = styled.section`
                         }
                         button {
                             width: 200px;
+                            padding-top: 20px;
+                            padding-bottom: 20px;
+                            font-size: 20px;
                             background-color: #2E331F;
                             color: white;
                             margin: 50px auto 0;
