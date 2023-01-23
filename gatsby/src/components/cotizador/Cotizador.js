@@ -188,6 +188,9 @@ const CotizadorContainer = styled.section`
             align-items: center;
             margin-top: 50px;
             margin-bottom: 50px;
+            @media (max-width: 485px) {
+                grid-template-columns: 1fr;
+            }
             .item {
                 h2 {
                     font-size: 2.5rem;

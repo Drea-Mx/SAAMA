@@ -53,6 +53,10 @@ border-radius: 30px;
 max-width: 600px;
 margin-left: auto;
 margin-right: auto;
+@media (max-width: 485px) {
+    padding: 20px;
+    border-radius: 15px;
+}
     div {
         display: flex;
         flex-direction: column;
@@ -60,15 +64,24 @@ margin-right: auto;
         align-items: center;
         text-align: center;
         padding: 0 20px;
+        @media (max-width: 485px) {
+            padding: 0 10px;
+        }
         .number {
             color: white;
             font-size: 2.3rem;
+            @media (max-width: 485px) {
+                font-size: 1rem;
+            }
         }
         .text {
             text-transform: uppercase;
             font-family: var(--slim);
             font-size: 1.2rem;
             color: white;
+            @media (max-width: 485px) {
+                font-size: 0.8rem;
+            }
         }
     }
 `
