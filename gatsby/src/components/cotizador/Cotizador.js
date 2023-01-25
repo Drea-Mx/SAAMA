@@ -401,6 +401,401 @@ const Cotizador = () => {
                   'Total: 175.78 m²',
               ],
           }
+          
+
+
+
+          // Depa 401
+
+          const [depa401, setDepa401] = useState(false);
+
+          const depa401Info = {
+              titulo: 'DEPARTAMENTO 401',
+              arr: [
+                'Cocina', 
+                  'Comedor', 
+                  'Sala', 
+                  'Terraza',
+                  'Recámara A',
+                  'Vestidor A',
+                  'Baño A',
+                  'Baño de visitas',
+                  'Alacena / bodega',
+                  'Recámara B',
+                  'Clóset B',
+                  'Baño B',
+                  'Recámara C',
+                  'Clóset C',
+                  'Baño C',
+                  'Cuarto de lavado',
+                  'Baño de servicio',
+                  'Área de compresores',
+              ],
+              plano: '/depas/401.png',
+              precio: '9,013,440.00',
+              codigoDepa: '401',
+              nivel: '2-7',
+              cajones: '2',
+              espacios1: [
+                  'Interior: 160.03 m²',
+                  'Bodega: 1.19 m²',
+                  'Balcón: 19.71 m²',
+                  'Piscina: N/A',
+                  'Patio servicio: 4.03 m²',
+                  'Pérgola: N/A',
+                  'Servicio: N/A',
+              ],
+              espacios2: [
+                  'Techados: 184.96 m²',
+                  'No Techados: N/A',
+                  'Total: 184.96 m²',
+              ],
+          }
+          
+
+
+
+          // Depa 402
+
+          const [depa402, setDepa402] = useState(false);
+
+          const depa402Info = {
+              titulo: 'DEPARTAMENTO 402',
+              arr: [
+                'Cocina', 
+                'Alacena / Bodega', 
+                'Comedor', 
+                'Sala',
+                'Terraza',
+                'Recámara A',
+                'Clóset / Vestidor A',
+                'Baño A',
+                'Baño de visitas',
+                'Recámara B',
+                'Clóset / Vestidor B',
+                'Baño B',
+                'Recámara C',
+                'Clóset C',
+                'Baño C',
+                'Cuarto de lavado',
+                'Baño de servicio',
+                'Área de compresores',
+              ],
+              plano: '/depas/402.png',
+              precio: '8,529,120.00',
+              codigoDepa: '402',
+              nivel: '2-7',
+              cajones: '2',
+              espacios1: [
+                  'Interior: 149.59 m²',
+                  'Bodega: 1.19 m²',
+                  'Balcón: 19.51 m²',
+                  'Piscina: N/A',
+                  'Patio servicio: 5.50 m²',
+                  'Pérgola: N/A',
+                  'Servicio: N/A',
+              ],
+              espacios2: [
+                  'Techados: 175.79 m²',
+                  'No Techados: N/A',
+                  'Total: 175.79 m²',
+              ],
+          }
+          
+
+
+
+          // Depa 501
+
+          const [depa501, setDepa501] = useState(false);
+
+          const depa501Info = {
+              titulo: 'DEPARTAMENTO 501',
+              arr: [
+                'Cocina', 
+                'Comedor', 
+                'Sala', 
+                'Terraza',
+                'Recámara A',
+                'Vestidor A',
+                'Baño A',
+                'Baño de visitas',
+                'Alacena / bodega',
+                'Recámara B',
+                'Clóset B',
+                'Baño B',
+                'Recámara C',
+                'Clóset C',
+                'Baño C',
+                'Cuarto de lavado',
+                'Baño de servicio',
+                'Área de compresores',
+              ],
+              plano: '/depas/501.png',
+              precio: '9,121,601.28',
+              codigoDepa: '501',
+              nivel: '2-7',
+              cajones: '2',
+              espacios1: [
+                  'Interior: 160.03 m²',
+                  'Bodega: 1.19 m²',
+                  'Balcón: 19.71 m²',
+                  'Piscina: N/A',
+                  'Patio servicio: 4.03 m²',
+                  'Pérgola: N/A',
+                  'Servicio: N/A',
+              ],
+              espacios2: [
+                  'Techados: 184.96 m²',
+                  'No Techados: 184.97 m²',
+                  'Total: 184.96 m²',
+              ],
+          }
+
+
+
+          // Depa 502
+
+          const [depa502, setDepa502] = useState(false);
+
+          const depa502Info = {
+              titulo: 'DEPARTAMENTO 502',
+              arr: [
+                'Cocina', 
+                'Alacena / Bodega', 
+                'Comedor', 
+                'Sala',
+                'Terraza',
+                'Recámara A',
+                'Clóset / Vestidor A',
+                'Baño A',
+                'Baño de visitas',
+                'Recámara B',
+                'Clóset / Vestidor B',
+                'Baño B',
+                'Recámara C',
+                'Clóset C',
+                'Baño C',
+                'Cuarto de lavado',
+                'Baño de servicio',
+                'Área de compresores',
+              ],
+              plano: '/depas/502.png',
+              precio: '8,631,469.44',
+              codigoDepa: '502',
+              nivel: '2-7',
+              cajones: '2',
+              espacios1: [
+                  'Interior: 149.59 m²',
+                  'Bodega: 1.19 m²',
+                  'Balcón: 19.51 m²',
+                  'Piscina: N/A',
+                  'Patio servicio: 5.50 m²',
+                  'Pérgola: N/A',
+                  'Servicio: N/A',
+              ],
+              espacios2: [
+                  'Techados: 175.79 m²',
+                  'No Techados: N/A',
+                  'Techados: 175.79 m²',
+              ],
+          }
+
+
+
+          // Depa 601
+
+          const [depa601, setDepa601] = useState(false);
+
+          const depa601Info = {
+              titulo: 'DEPARTAMENTO 601',
+              arr: [
+                'Cocina', 
+                'Comedor', 
+                'Sala', 
+                'Terraza',
+                'Recámara A',
+                'Vestidor A',
+                'Baño A',
+                'Baño de visitas',
+                'Alacena / bodega',
+                'Recámara B',
+                'Clóset B',
+                'Baño B',
+                'Recámara C',
+                'Clóset C',
+                'Baño C',
+                'Cuarto de lavado',
+                'Baño de servicio',
+                'Área de compresores',
+              ],
+              plano: '/depas/601.png',
+              precio: '9,231,060.50',
+              codigoDepa: '601',
+              nivel: '2-7',
+              cajones: '2',
+              espacios1: [
+                  'Interior: 160.03 m²',
+                  'Bodega: 1.19 m²',
+                  'Balcón: 27.71 m²',
+                  'Piscina: N/A',
+                  'Patio servicio: 4.03 m²',
+                  'Pérgola: N/A',
+                  'Servicio: N/A',
+              ],
+              espacios2: [
+                  'Techados: 187.28 m²',
+                  'No Techados: 5.68 m²',
+                  'Total: 192.96 m²',
+              ],
+          }
+
+
+
+          // Depa 602
+
+          const [depa602, setDepa602] = useState(false);
+
+          const depa602Info = {
+              titulo: 'DEPARTAMENTO 602',
+              arr: [
+                'Cocina', 
+                'Alacena / Bodega', 
+                'Comedor', 
+                'Sala',
+                'Terraza',
+                'Recámara A',
+                'Clóset / Vestidor A',
+                'Baño A',
+                'Baño de visitas',
+                'Recámara B',
+                'Clóset / Vestidor B',
+                'Baño B',
+                'Recámara C',
+                'Clóset C',
+                'Baño C',
+                'Cuarto de lavado',
+                'Baño de servicio',
+                'Área de compresores',
+              ],
+              plano: '/depas/602.png',
+              precio: '8,735,047.07',
+              codigoDepa: '602',
+              nivel: '2-7',
+              cajones: '2',
+              espacios1: [
+                  'Interior: 149.53 m²',
+                  'Bodega: 1.19 m²',
+                  'Balcón: 19.54 m²',
+                  'Piscina: N/A',
+                  'Patio servicio: 5.50 m²',
+                  'Pérgola: N/A',
+                  'Servicio: N/A',
+              ],
+              espacios2: [
+                  'Techados: 175.76 m²',
+                  'No Techados: 7.80 m²',
+                  'Total: 175.76 m²',
+              ],
+          }
+
+
+
+          // Depa 701
+
+          const [depa701, setDepa701] = useState(false);
+
+          const depa701Info = {
+              titulo: 'DEPARTAMENTO 701',
+              arr: [
+                'Cocina', 
+                'Comedor', 
+                'Sala', 
+                'Terraza',
+                'Recámara A',
+                'Vestidor A',
+                'Baño A',
+                'Baño de visitas',
+                'Alacena / bodega',
+                'Recámara B',
+                'Clóset B',
+                'Baño B',
+                'Recámara C',
+                'Clóset C',
+                'Baño C',
+                'Cuarto de lavado',
+                'Baño de servicio',
+                'Área de compresores',
+              ],
+              plano: '/depas/701.png',
+              precio: '9,341,833.22',
+              codigoDepa: '701',
+              nivel: '2-7',
+              cajones: '2',
+              espacios1: [
+                  'Interior: 160.03 m²',
+                  'Bodega: 1.19 m²',
+                  'Balcón: 22.03 m²',
+                  'Piscina: N/A',
+                  'Patio servicio: 4.03 m²',
+                  'Pérgola: N/A',
+                  'Servicio: N/A',
+              ],
+              espacios2: [
+                  'Techados: 187.28 m²',
+                  'No Techados: N/A',
+                  'Total: 187.28 m²',
+              ],
+          }
+
+
+
+          // Depa 702
+
+          const [depa702, setDepa702] = useState(false);
+
+          const depa702Info = {
+              titulo: 'DEPARTAMENTO 702',
+              arr: [
+                'Cocina', 
+                'Alacena / Bodega', 
+                'Comedor', 
+                'Sala',
+                'Terraza',
+                'Recámara A',
+                'Clóset / Vestidor A',
+                'Baño A',
+                'Baño de visitas',
+                'Recámara B',
+                'Clóset / Vestidor B',
+                'Baño B',
+                'Recámara C',
+                'Clóset C',
+                'Baño C',
+                'Cuarto de lavado',
+                'Baño de servicio',
+                'Área de compresores',
+              ],
+              plano: '/depas/702.png',
+              precio: '8,839,867.64',
+              codigoDepa: '702',
+              nivel: '2-7',
+              cajones: '2',
+              espacios1: [
+                  'Interior: 149.58 m²',
+                  'Bodega: 1.19 m²',
+                  'Balcón: 19.50 m²',
+                  'Piscina: N/A',
+                  'Patio servicio: 5.50 m²',
+                  'Pérgola: N/A',
+                  'Servicio: N/A',
+              ],
+              espacios2: [
+                  'Techados: 175.77 m²',
+                  'No Techados: N/A',
+                  'Total: 175.77 m²',
+              ],
+          }
 
           
 
@@ -432,6 +827,14 @@ const Cotizador = () => {
                         <button onClick={() => setDepa202(!depa202)} className='depa202'>202</button>
                         <button onClick={() => setDepa301(!depa301)} className='depa301'>301</button>
                         <button onClick={() => setDepa302(!depa302)} className='depa302'>302</button>
+                        <button onClick={() => setDepa401(!depa401)} className='depa401'>401</button>
+                        <button onClick={() => setDepa402(!depa402)} className='depa402'>402</button>
+                        <button onClick={() => setDepa501(!depa501)} className='depa501'>501</button>
+                        <button onClick={() => setDepa502(!depa502)} className='depa502'>502</button>
+                        <button onClick={() => setDepa601(!depa601)} className='depa601'>601</button>
+                        <button onClick={() => setDepa602(!depa602)} className='depa602'>602</button>
+                        <button onClick={() => setDepa701(!depa701)} className='depa701'>701</button>
+                        <button onClick={() => setDepa702(!depa702)} className='depa702'>702</button>
                     </div>
                 </div>
             </motion.div>
@@ -534,6 +937,78 @@ const Cotizador = () => {
                         depa01={depa302}
                         setDepa01={setDepa302}
                         depaInfo={depa302Info}
+                    />
+            :
+            ''
+                }
+                {depa401 ? 
+                    <Depa 
+                        depa01={depa401}
+                        setDepa01={setDepa401}
+                        depaInfo={depa401Info}
+                    />
+            :
+            ''
+                }
+                {depa402 ? 
+                    <Depa 
+                        depa01={depa402}
+                        setDepa01={setDepa402}
+                        depaInfo={depa402Info}
+                    />
+            :
+            ''
+                }
+                {depa501 ? 
+                    <Depa 
+                        depa01={depa501}
+                        setDepa01={setDepa501}
+                        depaInfo={depa501Info}
+                    />
+            :
+            ''
+                }
+                {depa502 ? 
+                    <Depa 
+                        depa01={depa502}
+                        setDepa01={setDepa502}
+                        depaInfo={depa502Info}
+                    />
+            :
+            ''
+                }
+                {depa601 ? 
+                    <Depa 
+                        depa01={depa601}
+                        setDepa01={setDepa601}
+                        depaInfo={depa601Info}
+                    />
+            :
+            ''
+                }
+                {depa602 ? 
+                    <Depa 
+                        depa01={depa602}
+                        setDepa01={setDepa602}
+                        depaInfo={depa602Info}
+                    />
+            :
+            ''
+                }
+                {depa701 ? 
+                    <Depa 
+                        depa01={depa701}
+                        setDepa01={setDepa701}
+                        depaInfo={depa701Info}
+                    />
+            :
+            ''
+                }
+                {depa702 ? 
+                    <Depa 
+                        depa01={depa702}
+                        setDepa01={setDepa702}
+                        depaInfo={depa702Info}
                     />
             :
             ''
@@ -655,6 +1130,62 @@ const CotizadorContainer = styled.section`
                     background-color: #E29C25;
                     left: 44px;
                     bottom: 126.5px;
+                }
+                .depa401 {
+                    width: 93px;
+                    height: 34px;
+                    background-color: #808642;
+                    right: 47px;
+                    bottom: 164px;
+                }
+                .depa402 {
+                    width: 93px;
+                    height: 34px;
+                    background-color: #808642;
+                    left: 44px;
+                    bottom: 164px;
+                }
+                .depa501 {
+                    width: 93px;
+                    height: 34px;
+                    background-color: #808642;
+                    right: 47px;
+                    bottom: 201px;
+                }
+                .depa502 {
+                    width: 93px;
+                    height: 34px;
+                    background-color: #E29C25;
+                    left: 44px;
+                    bottom: 201px;
+                }
+                .depa601 {
+                    width: 93px;
+                    height: 34px;
+                    background-color: #808642;
+                    right: 47px;
+                    bottom: 238.5px;
+                }
+                .depa602 {
+                    width: 93px;
+                    height: 34px;
+                    background-color: #808642;
+                    left: 44px;
+                    bottom: 238.5px;
+                }
+                .depa701 {
+                    width: 93px;
+                    height: 34px;
+                    background-color: #808642;
+                    right: 47px;
+                    bottom: 275.5px;
+                }
+                .depa702 {
+                    width: 93px;
+                    height: 34px;
+                    background-color: #808642;
+                    left: 44px;
+                    bottom: 275.5px;
                 }
             }
         }
