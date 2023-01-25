@@ -12,7 +12,7 @@ const Header = ({dark}) => {
     return(
         <HeaderContainer 
         style={{
-            height: nav ? '600px' : '100px',
+            height: nav ? '600px' : '120px',
             backgroundColor: nav ? '#EBE6DD' : '',
           }}
         >
@@ -80,8 +80,8 @@ const Header = ({dark}) => {
 const HeaderContainer = styled.nav`
 position: fixed;
 width: 100%;
-top: 50px;
-padding: 0 50px;
+top: 0;
+padding: 50px 50px;
 z-index: 5;
 transition: all 350ms ease-in-out;
     @media (max-width: 780px) {

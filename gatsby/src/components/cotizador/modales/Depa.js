@@ -90,12 +90,12 @@ const Container = styled.section`
     justify-content: center;
     align-items: center;
     z-index: 5;
-    padding: 20px;
+    padding: 50px;
     
     .modal {
         background-color: #EBE6DC;
         width: 100%;
-        max-width: 1500px;
+        max-width: 1200px;
         padding: 50px;
         box-sizing: border-box;
         height: auto;
@@ -124,7 +124,7 @@ const Container = styled.section`
                 flex-direction: column;
             }
             .iz {
-                width: 60%;
+                width: 80%;
                 padding-right: 50px;
                 height: 100%;
                 display: grid;
@@ -139,7 +139,7 @@ const Container = styled.section`
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    margin-bottom: 100px;
+                    margin-bottom: 50px;
                     @media (max-width: 850px) {
                         margin-bottom: 50px;
                     }
@@ -207,41 +207,43 @@ const Container = styled.section`
 
                 }
                 .top {
-                    margin-bottom: 100px;
+                    margin-bottom: 50px;
                     @media (max-width: 850px) {
                         text-align: center;
                         margin-top: 50px;
                         margin-bottom: 50px;
                     }
                     h3 {
-                        font-size: 2rem;
+                        font-size: 1.5rem;
                         font-family: var(--slim);
                     }
                 }
                 .bot {
                     p {
-                        font-size: 1.2rem;
+                        font-size: 1rem;
                         margin-bottom: 30px;
                     }
                     form {
                         input, button, textarea{
                             display: block;
                             width: 100%;
-                            padding: 10px 15px;
-                            margin-bottom: 10px;
+                            padding: 10px;
+                            margin-bottom: 8px;
                             background-color: transparent;
                             outline: none;
                             border:  solid 2px #2E331F;
                             border-radius: 10px;
                         }
                         button {
-                            width: 200px;
-                            padding-top: 20px;
-                            padding-bottom: 20px;
+                            width: 150px;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
                             font-size: 20px;
                             background-color: #2E331F;
                             color: white;
-                            margin: 50px auto 0;
+                            margin: 30px auto 0;
+                            text-transform: uppercase;
+                            font-family: var(--slim);
                         }
                         .mitad {
                             display: grid;

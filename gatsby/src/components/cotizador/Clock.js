@@ -50,7 +50,7 @@ margin-bottom: 20px;
 background-color: #E29C25;
 padding: 30px;
 border-radius: 30px;
-max-width: 600px;
+max-width: 500px;
 margin-left: auto;
 margin-right: auto;
 @media (max-width: 485px) {
@@ -69,7 +69,7 @@ margin-right: auto;
         }
         .number {
             color: white;
-            font-size: 2.3rem;
+            font-size: 1.5rem;
             @media (max-width: 485px) {
                 font-size: 1rem;
             }
@@ -77,7 +77,7 @@ margin-right: auto;
         .text {
             text-transform: uppercase;
             font-family: var(--slim);
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: white;
             @media (max-width: 485px) {
                 font-size: 0.8rem;

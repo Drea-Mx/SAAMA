@@ -192,7 +192,7 @@ const Galeria = () => {
                 </Slider>
             </motion.div>
 
-            <Link to='/numeralia'>
+            <Link to='/cotizador'>
                 ↓
             </Link>
         </UbicacionContainer>
@@ -211,7 +211,7 @@ const UbicacionContainer = styled.section`
         width: 50px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 50px;
+        margin-top: 30px;
         font-size: 60px;
         z-index: 5;
         @media (max-width: 680px) {
@@ -219,7 +219,7 @@ const UbicacionContainer = styled.section`
         }
     }
     .icono {
-        width: 66px;
+        width: 46px;
         @media (max-width: 780px) {
             width: 40px;
         }
@@ -227,12 +227,12 @@ const UbicacionContainer = styled.section`
     .slider {
         max-width: 800px;
         width: 80%;
-        margin: 50px auto;
+        margin: 50px auto 0;
         @media (max-width: 780px) {
             width: 70%;
         }
         .slide {
-            height: 500px;
+            height: 450px;
             border-radius: 30px;
             overflow: hidden;
         }

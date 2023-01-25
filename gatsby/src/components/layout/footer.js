@@ -84,7 +84,7 @@ const FooterContainer = styled.footer`
         }
         a {
             display: block;
-            width: 140px;
+            width: 100px;
             margin-right: 20px;
             animation: grow 1500ms ease-in-out 2s infinite forwards;
             @media (max-width: 780px) {
