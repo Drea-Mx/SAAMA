@@ -10,7 +10,7 @@ const Footer = () => {
                     className="red"
                     rel="noreferrer" 
                     target='_blank'  
-                    href='https://www.facebook.com/people/SAAMA-Telchac/100085116297594/'
+                    href='https://www.facebook.com/profile.php?id=100085116297594'
                     initial={{ y: "200px" }}
                     animate={{ y: "0" }}
                     transition={{ delay: 0, duration: 1, repeat: 0 }}
@@ -21,7 +21,7 @@ const Footer = () => {
                     className="red"
                     rel="noreferrer" 
                     target='_blank'  
-                    href='https://www.facebook.com/people/SAAMA-Telchac/100085116297594/'
+                    href='https://www.instagram.com/saamatelchac/'
                     initial={{ y: "200px" }}
                     animate={{ y: "0" }}
                     transition={{ delay: 0, duration: 1, repeat: 0 }}
@@ -32,7 +32,8 @@ const Footer = () => {
                     className="brochure"
                     rel="noreferrer" 
                     target='_blank'  
-                    href='https://www.facebook.com/people/SAAMA-Telchac/100085116297594/'
+                    download
+                    href='/BROCHURE_SAAMA_241122_ESP.pdf'
                     initial={{ y: "200px" }}
                     animate={{ y: "0" }}
                     transition={{ delay: 0, duration: 1, repeat: 0 }}
@@ -45,7 +46,7 @@ const Footer = () => {
                 <motion.a   
                     rel="noreferrer" 
                     target='_blank'  
-                    href='https://www.facebook.com/people/SAAMA-Telchac/100085116297594/'
+                    href='https://wa.me/529991633494/?text=Mensaje desde la página web: Me interesa obtener más información sobre SAAMA Telchac'
                     initial={{ y: "200px" }}
                     animate={{ y: "0" }}
                     transition={{ delay: 0, duration: 1, repeat: 0 }}
