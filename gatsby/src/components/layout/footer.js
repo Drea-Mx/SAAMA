@@ -28,6 +28,17 @@ const Footer = () => {
                 >
                         <img src='/insta.svg' alt='Icono Instagram' />
                 </motion.a >
+                <motion.a   
+                    className="brochure"
+                    rel="noreferrer" 
+                    target='_blank'  
+                    href='https://www.facebook.com/people/SAAMA-Telchac/100085116297594/'
+                    initial={{ y: "200px" }}
+                    animate={{ y: "0" }}
+                    transition={{ delay: 0, duration: 1, repeat: 0 }}
+                >
+                        <p>brochure</p>
+                </motion.a >
             </div>
 
             <div className='whats'>
@@ -71,6 +82,20 @@ const FooterContainer = styled.footer`
             display: block;
             width: 40px;
             margin-right: 20px;
+        }
+        a.brochure {
+            width: auto;
+            p {
+                background-color: #2E331E;
+                color: var(--white);
+                font-family: var(--regular);
+                border-radius: 10px;
+                width: 100%;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                padding: 8px;
+                text-align: center;
+            }
         }
     }
     .whats {

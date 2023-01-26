@@ -1,16 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import { motion } from "framer-motion"
 
-const Depa = ({depaInfo, depa01, setDepa01}) => {
+const PentHouse = ({depaInfo, depa01, setDepa01}) => {
 
-    const image = depaInfo.plano
+    const [next, setNext] = useState(false);
+
+
+    const image1 = depaInfo.plano1
+    const image2 = depaInfo.plano2
 
     return(
         <>
         {depa01 ? 
 
         <Container>
+            
             <motion.div  
                 className="modal" 
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -22,7 +27,20 @@ const Depa = ({depaInfo, depa01, setDepa01}) => {
                 <div className='sections'>
                     <div className='iz'>
                         <div className='image'>
-                            <img src={image} alt='plano' />
+                            {
+                                next ?
+                                <img src={image1} alt='plano' />
+                                :
+                                <img src={image2} alt='plano' />
+                            }
+                            <div className='flechas'>
+                                <button className='izquierda' onClick={() => setNext(!next)}>
+                                    <img  src='/flechaAb.svg' alt='flecha izquierda' />
+                                </button>
+                                <button className='derecha' onClick={() => setNext(!next)}>
+                                    <img  src='/flechaAb.svg' alt='flecha derecha' />
+                                </button>
+                            </div>
                         </div>
                         <div className='info'>
                             <div className='area'>
@@ -35,20 +53,38 @@ const Depa = ({depaInfo, depa01, setDepa01}) => {
                             </div>
                             <div className='esp'>
                                     <h2>ESPECIFICACIONES</h2>
-                                    <ul>
-                                        <li>Nivel: {depaInfo.nivel}</li>
-                                        <li>Cajones: {depaInfo.cajones}</li>
-                                    </ul>
-                                    <ul>
-                                        {depaInfo.espacios1.map((espacio) => {
-                                            return <li key={espacio}>{espacio}</li>;
-                                        })}
-                                    </ul>
-                                    <ul>
-                                        {depaInfo.espacios2.map((espacio2) => {
-                                            return <li key={espacio2}>{espacio2}</li>;
-                                        })}
-                                    </ul>
+                                    {
+                                        next ?
+                                        <div>
+                                            <ul>
+                                                <li>Nivel: {depaInfo.nivel}</li>
+                                            </ul>
+                                            <ul>
+                                                {depaInfo.espacios1.map((espacio) => {
+                                                    return <li key={espacio}>{espacio}</li>;
+                                                })}
+                                            </ul>
+                                            <ul>
+                                                {depaInfo.espacios2.map((espacio2) => {
+                                                    return <li key={espacio2}>{espacio2}</li>;
+                                                })}
+                                            </ul>
+                                        </div>
+                                        :
+                                        <div>
+                                            <ul>
+                                                <li>Cajones: {depaInfo.cajones}</li>
+                                            </ul>
+                                            <ul>
+                                                {depaInfo.espacios3.map((espacio) => {
+                                                    return <li key={espacio}>{espacio}</li>;
+                                                })}
+                                            </ul>
+                                            <ul>
+                                                <li>No Techados: {depaInfo.noTechados}</li>
+                                            </ul>
+                                        </div>
+                                    }
                             </div>
                         </div>
                     </div>
@@ -107,8 +143,8 @@ const Container = styled.section`
         border-radius: 20px;
         overflow: scroll;
         position: relative;
-        @media (max-width: 850px) {
-            height: 90vh;
+        @media (max-width: 1000px) {
+            height: 80vh;
             overflow-y: scroll;
         }
         button.close {
@@ -127,6 +163,7 @@ const Container = styled.section`
             padding-top: 50px;
             @media (max-width: 850px) {
                 flex-direction: column;
+                height: auto;
             }
             .iz {
                 width: 80%;
@@ -145,28 +182,56 @@ const Container = styled.section`
                     flex-direction: column;
                     justify-content: center;
                     margin-bottom: 50px;
+                    position: relative;
                     @media (max-width: 850px) {
                         margin-bottom: 50px;
+                    }
+                    .flechas {
+                        button {
+                            position: absolute;
+                            img {
+                                width: 20px;
+                            }
+                        }
+                        button.derecha {
+                            right: -20px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            img {
+                                transform: rotate(-90deg);
+
+                            }
+                        }
+                        button.izquierda {
+                            left: -20px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            img {
+                                transform: rotate(90deg);
+
+                            }
+                        }
                     }
                 }
                 .info {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     grid-gap: 20px;
-                    @media (max-width: 650px) {
+                    @media (max-width: 1000px) {
                         grid-template-columns: 1fr;
                     }
                     .area {
+                        width: 100%;
                         ul {
-                            width: 250px;
+                            width: max-content;
+                            li {
+                                margin-right: 20px;
+                            }
                             @media (max-width: 1000px) {
-                                width: 200px;
+                                width: 100%;
                                 li {
                                     margin-right: 10px;
                                 }
-                            }
-                            @media (max-width: 850px) {
-                                width: 250px;
                             }
                             @media (max-width: 650px) {
                                 li {
@@ -176,7 +241,11 @@ const Container = styled.section`
                         }
                     }
                     .esp {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
                         ul {
+                            column-count: 1;
                             list-style: none;
                             margin-bottom: 20px;
                             margin-left: 0;
@@ -190,9 +259,15 @@ const Container = styled.section`
                         margin-bottom: 10px;
                     }
                     ul {
-                        column-count: 2;
+                        column-count: 3;
                         list-style: decimal-leading-zero;
                         margin-left: 20px;
+                        @media (max-width: 585px) {
+                            column-count: 2;
+                        }
+                        @media (max-width: 460px) {
+                            column-count: 1;
+                        }
                         li {
                             font-family: var(--slim);
                             font-size: 1rem;
@@ -209,13 +284,11 @@ const Container = styled.section`
                 @media (max-width: 850px) {
                     width: 100%;
                     padding-bottom: 50px;
-
                 }
                 .top {
                     margin-bottom: 50px;
                     @media (max-width: 850px) {
                         text-align: center;
-                        margin-top: 50px;
                         margin-bottom: 50px;
                     }
                     h3 {
@@ -262,4 +335,4 @@ const Container = styled.section`
     }
 `
 
-export default Depa
+export default PentHouse

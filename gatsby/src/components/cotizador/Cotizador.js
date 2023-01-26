@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Depa from './modales/Depa'
 import App from './Cont'
 import { Link } from 'gatsby'
+import PentHouse from './modales/PentHouse'
 
 const Cotizador = () => {
 
@@ -797,6 +798,126 @@ const Cotizador = () => {
               ],
           }
 
+
+
+          // PHA
+
+          const [depaPHA, setDepaPHA] = useState(false);
+
+          const depaPHAInfo = {
+              titulo: 'PENTHOUSE A',
+              arr: [
+                'Recámara A', 
+                'Clóset / Vestidor A', 
+                'Baño A', 
+                'Terraza A',
+                'Recámara B',
+                'Clóset / Vestidor B',
+                'Baño B',
+                'Recámara C',
+                'Clóset / Vestidor C',
+                'Baño C',
+                'Terraza C',
+                'Recámara D',
+                'Clóset / Vestidor D',
+                'Baño D',
+                'Terraza D',
+                'Cocina',
+                'Alacena',
+                'Comedor',
+                'Sala',
+                'Terraza 1',
+                'Baño de visitas',
+                'Terraza 2',
+                'Área de lavado',
+                'Baño de servicio',
+                'Circulación vertical',
+                'Área de compresores',
+              ],
+              plano1: '/depas/PH01_PA.png',
+              plano2: '/depas/PH01_PB.png',
+              precio: '16,618,143.24',
+              codigoDepa: 'pha',
+              nivel: '8-9',
+              cajones: '2',
+              noTechados: '63.01 m²',
+              espacios1: [
+                  'Interior: 260.48 m²',
+                  'Balcón: 109.77 m²',
+                  'Patio servicio: N/A',
+                  'Servicio: N/A',
+              ],
+              espacios2: [
+                  'Techados: 322.33 m²',
+                  'Total: 385.34 m²',
+              ],
+              espacios3: [
+                  'Bodega: 6.12 m²',
+                  'Piscina: 8.97 m²',
+                  'Pérgola: N/A',
+              ],
+          }
+
+
+
+          // PHB
+
+          const [depaPHB, setDepaPHB] = useState(false);
+
+          const depaPHBInfo = {
+              titulo: 'PENTHOUSE B',
+              arr: [
+                'Recámara A', 
+                'Clóset / Vestidor A', 
+                'Baño A', 
+                'Terraza A',
+                'Recámara B',
+                'Clóset B',
+                'Baño B',
+                'Recámara C',
+                'Clóset C',
+                'Baño C',
+                'Terraza C',
+                'Recámara D',
+                'Clóset',
+                'Baño D',
+                'Bodega',
+                'Cocina',
+                'Alacena',
+                'Comedor',
+                'Sala',
+                'Terraza 1',
+                'Terraza 2',
+                'Baño de visitas',
+                'Área de lavado',
+                'Baño de servicio',
+                'Bodega',
+                'Circulación vertical',
+              ],
+              plano1: '/depas/PH02_PA.png',
+              plano2: '/depas/PH02_PB.png',
+              precio: '15,992,344.89',
+              codigoDepa: 'phb',
+              nivel: '8-9',
+              cajones: '2',
+              noTechados: '66.68 m²',
+              espacios1: [
+                  'Interior: 242.26 m²',
+                  'Balcón: 104.53 m²',
+                  'Patio servicio: N/A',
+                  'Servicio: N/A',
+              ],
+              espacios2: [
+                  'Techados: 302.04 m²',
+                  'Total : 368.72 m²',
+              ],
+              espacios3: [
+                  'Bodega: 12.18 m²',
+                  'Piscina: 9.75 m²',
+                  'Pérgola: N/A',
+              ],
+          }
+
           
 
     return(
@@ -835,6 +956,10 @@ const Cotizador = () => {
                         <button onClick={() => setDepa602(!depa602)} className='depa602'>602</button>
                         <button onClick={() => setDepa701(!depa701)} className='depa701'>701</button>
                         <button onClick={() => setDepa702(!depa702)} className='depa702'>702</button>
+                        <button onClick={() => setDepaPHA(!depaPHA)} className='depaPHA-1'>PHA</button>
+                        <button onClick={() => setDepaPHA(!depaPHA)} className='depaPHA-2'>PHA</button>
+                        <button onClick={() => setDepaPHB(!depaPHB)} className='depaPHB-1'>PHB</button>
+                        <button onClick={() => setDepaPHB(!depaPHB)} className='depaPHB-2'>PHB</button>
                     </div>
                 </div>
             </motion.div>
@@ -1013,6 +1138,24 @@ const Cotizador = () => {
             :
             ''
                 }
+                {depaPHA ? 
+                    <PentHouse 
+                        depa01={depaPHA}
+                        setDepa01={setDepaPHA}
+                        depaInfo={depaPHAInfo}
+                    />
+            :
+            ''
+                }
+                {depaPHB ? 
+                    <PentHouse 
+                        depa01={depaPHB}
+                        setDepa01={setDepaPHB}
+                        depaInfo={depaPHBInfo}
+                    />
+            :
+            ''
+                }
                 
             </div>
             
@@ -1186,6 +1329,34 @@ const CotizadorContainer = styled.section`
                     background-color: #808642;
                     left: 44px;
                     bottom: 275.5px;
+                }
+                .depaPHA-1 {
+                    width: 93px;
+                    height: 34px;
+                    background-color: #808642;
+                    right: 47px;
+                    bottom: 313px;
+                }
+                .depaPHA-2 {
+                    width: 93px;
+                    height: 34px;
+                    background-color: #808642;
+                    right: 47px;
+                    bottom: 350px;
+                }
+                .depaPHB-1 {
+                    width: 93px;
+                    height: 34px;
+                    background-color: #808642;
+                    left: 44px;
+                    bottom: 313px;
+                }
+                .depaPHB-2 {
+                    width: 93px;
+                    height: 34px;
+                    background-color: #808642;
+                    left: 44px;
+                    bottom: 350px;
                 }
             }
         }
