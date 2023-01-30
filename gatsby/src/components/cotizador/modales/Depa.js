@@ -7,97 +7,99 @@ const Depa = ({depaInfo, depa01, setDepa01}) => {
     const image = depaInfo.plano
 
     return(
-        <>
-        {depa01 ? 
-
         <Container>
-            <motion.div  
-                className="modal" 
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-            >
-                <button className='close' onClick={() => setDepa01(!depa01)}>x</button>
-                <h2>{depaInfo.titulo}</h2>
-                <div className='sections'>
-                    <div className='iz'>
-                        <div className='image'>
-                            <img src={image} alt='plano' />
-                        </div>
-                        <div className='info'>
-                            <div className='area'>
-                                <h2>Áreas</h2>
-                                <ul>
-                                    {depaInfo.arr.map((title) => {
-                                        return <li key={title}>{title}</li>;
-                                    })}
-                                </ul>
+
+            <div className={depa01 ? 'contenedor flex' : 'contenedor'}>
+                <motion.div  
+                    className="modal" 
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <button className='close' onClick={() => setDepa01(!depa01)}>x</button>
+                    <h2>{depaInfo.titulo}</h2>
+                    <div className='sections'>
+                        <div className='iz'>
+                            <div className='image'>
+                                <img src={image} alt='plano' />
                             </div>
-                            <div className='esp'>
-                                    <h2>ESPECIFICACIONES</h2>
+                            <div className='info'>
+                                <div className='area'>
+                                    <h2>Áreas</h2>
                                     <ul>
-                                        <li>Nivel: {depaInfo.nivel}</li>
-                                        <li>Cajones: {depaInfo.cajones}</li>
-                                    </ul>
-                                    <ul>
-                                        {depaInfo.espacios1.map((espacio) => {
-                                            return <li key={espacio}>{espacio}</li>;
+                                        {depaInfo.arr.map((title) => {
+                                            return <li key={title}>{title}</li>;
                                         })}
                                     </ul>
-                                    <ul>
-                                        {depaInfo.espacios2.map((espacio2) => {
-                                            return <li key={espacio2}>{espacio2}</li>;
-                                        })}
-                                    </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='de'>
-                        <div className='top'>
-                            <h3>Precio de venta</h3>
-                            <h3>${depaInfo.precio}</h3>
-                        </div>
-                        <div className='bot'>
-                            <p>Si te interesa este departamento envía un mensaje desde nuestro formulario y uno de nuestros asesores se pondrá en contacto contigo:</p>
-                            <form
-                                name='Depas Form' 
-                                method="POST"
-                                data-netlify="true"
-                                action="/success"
-                                >
-                                <input type="hidden" name="form-name" value="Depas Form" />
-                                <input type="hidden"  placeholder='Nombre' name='nombreDepa' value={depaInfo.codigoDepa} />
-                                <input type='text' placeholder='Nombre' name='nombre' />
-                                <input type='email' placeholder='Correo electrónico' name='email' />
-                                <div className='mitad'>
-                                    <input type='text' placeholder='Teléfono' name='tel' />
-                                    <input type='text' placeholder='Ciudad/Estado' name='ciudad' />
                                 </div>
-                                <textarea name="mensaje" placeholder='Mensaje'></textarea>
-                                <button type="submit">Enviar</button>
-                            </form>
+                                <div className='esp'>
+                                        <h2>ESPECIFICACIONES</h2>
+                                        <ul>
+                                            <li>Nivel: {depaInfo.nivel}</li>
+                                            <li>Cajones: {depaInfo.cajones}</li>
+                                        </ul>
+                                        <ul>
+                                            {depaInfo.espacios1.map((espacio) => {
+                                                return <li key={espacio}>{espacio}</li>;
+                                            })}
+                                        </ul>
+                                        <ul>
+                                            {depaInfo.espacios2.map((espacio2) => {
+                                                return <li key={espacio2}>{espacio2}</li>;
+                                            })}
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='de'>
+                            <div className='top'>
+                                <h3>Precio de venta</h3>
+                                <h3>${depaInfo.precio}</h3>
+                            </div>
+                            <div className='bot'>
+                                <p>Si te interesa este departamento envía un mensaje desde nuestro formulario y uno de nuestros asesores se pondrá en contacto contigo:</p>
+                                <form
+                                    name='Depas Form' 
+                                    method="POST"
+                                    data-netlify="true"
+                                    action="/success/"
+                                    >
+                                    <input type="hidden" name="form-name" value="Depas Form" />
+                                    <input type="hidden"  placeholder='Nombre' name='nombreDepa' value={depaInfo.codigoDepa} />
+                                    <input type='text' placeholder='Nombre' name='nombre' />
+                                    <input type='email' placeholder='Correo electrónico' name='email' />
+                                    <div className='mitad'>
+                                        <input type='text' placeholder='Teléfono' name='tel' />
+                                        <input type='text' placeholder='Ciudad/Estado' name='ciudad' />
+                                    </div>
+                                    <textarea name="mensaje" placeholder='Mensaje'></textarea>
+                                    <button type="submit">Enviar</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    
+                </motion.div>
                 
-            </motion.div>
-            
+            </div>
         </Container>
-        :
-            ''
-            }
-        </>
     )
 }
 
+
+
 const Container = styled.section`
+.flex {
+    display: flex !important;
+}
+.contenedor {
     position: fixed;
+    display: none;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 5;
@@ -266,6 +268,7 @@ const Container = styled.section`
             }
         }
     }
+}
 `
 
 export default Depa

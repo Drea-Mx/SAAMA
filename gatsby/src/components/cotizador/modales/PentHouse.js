@@ -11,10 +11,9 @@ const PentHouse = ({depaInfo, depa01, setDepa01}) => {
     const image2 = depaInfo.plano2
 
     return(
-        <>
-        {depa01 ? 
-
         <Container>
+
+        <div className={depa01 ? 'container flex' : 'container'}>
             
             <motion.div  
                 className="modal" 
@@ -118,22 +117,23 @@ const PentHouse = ({depaInfo, depa01, setDepa01}) => {
                 
             </motion.div>
             
+        </div>
         </Container>
-        :
-            ''
-            }
-        </>
     )
 }
 
 const Container = styled.section`
+.flex {
+    display: flex !important;
+}
+.container {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 5;
@@ -339,6 +339,8 @@ const Container = styled.section`
             }
         }
     }
+}
+
 `
 
 export default PentHouse

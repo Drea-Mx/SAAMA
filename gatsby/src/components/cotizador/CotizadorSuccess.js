@@ -997,168 +997,96 @@ const CotizadorSuccess = () => {
             </motion.div>
 
             <div className='depas'>
-                {depa01 ? 
                     <Depa 
                         depa01={depa01}
                         setDepa01={setDepa01}
                         depaInfo={depa1}
                     />
-            :
-            ''
-                }
-                {depa02 ? 
                     <Depa 
                         depa01={depa02}
                         setDepa01={setDepa02}
                         depaInfo={depa2}
                     />
-            :
-            ''
-                }
-                {depa101 ? 
                     <Depa 
                         depa01={depa101}
                         setDepa01={setDepa101}
                         depaInfo={depa101Info}
                     />
-            :
-            ''
-                }
-                {depa102 ? 
                     <Depa 
                         depa01={depa102}
                         setDepa01={setDepa102}
                         depaInfo={depa102Info}
                     />
-            :
-            ''
-                }
-                {depa201 ? 
                     <Depa 
                         depa01={depa201}
                         setDepa01={setDepa201}
                         depaInfo={depa201Info}
                     />
-            :
-            ''
-                }
-                {depa202 ? 
                     <Depa 
                         depa01={depa202}
                         setDepa01={setDepa202}
                         depaInfo={depa202Info}
                     />
-            :
-            ''
-                }
-                {depa301 ? 
                     <Depa 
                         depa01={depa301}
                         setDepa01={setDepa301}
                         depaInfo={depa301Info}
                     />
-            :
-            ''
-                }
-                {depa302 ? 
                     <Depa 
                         depa01={depa302}
                         setDepa01={setDepa302}
                         depaInfo={depa302Info}
                     />
-            :
-            ''
-                }
-                {depa401 ? 
                     <Depa 
                         depa01={depa401}
                         setDepa01={setDepa401}
                         depaInfo={depa401Info}
                     />
-            :
-            ''
-                }
-                {depa402 ? 
                     <Depa 
                         depa01={depa402}
                         setDepa01={setDepa402}
                         depaInfo={depa402Info}
                     />
-            :
-            ''
-                }
-                {depa501 ? 
                     <Depa 
                         depa01={depa501}
                         setDepa01={setDepa501}
                         depaInfo={depa501Info}
                     />
-            :
-            ''
-                }
-                {depa502 ? 
                     <Depa 
                         depa01={depa502}
                         setDepa01={setDepa502}
                         depaInfo={depa502Info}
                     />
-            :
-            ''
-                }
-                {depa601 ? 
                     <Depa 
                         depa01={depa601}
                         setDepa01={setDepa601}
                         depaInfo={depa601Info}
                     />
-            :
-            ''
-                }
-                {depa602 ? 
                     <Depa 
                         depa01={depa602}
                         setDepa01={setDepa602}
                         depaInfo={depa602Info}
                     />
-            :
-            ''
-                }
-                {depa701 ? 
                     <Depa 
                         depa01={depa701}
                         setDepa01={setDepa701}
                         depaInfo={depa701Info}
                     />
-            :
-            ''
-                }
-                {depa702 ? 
                     <Depa 
                         depa01={depa702}
                         setDepa01={setDepa702}
                         depaInfo={depa702Info}
                     />
-            :
-            ''
-                }
-                {depaPHA ? 
                     <PentHouse 
                         depa01={depaPHA}
                         setDepa01={setDepaPHA}
                         depaInfo={depaPHAInfo}
                     />
-            :
-            ''
-                }
-                {depaPHB ? 
                     <PentHouse 
                         depa01={depaPHB}
                         setDepa01={setDepaPHB}
                         depaInfo={depaPHBInfo}
                     />
-            :
-            ''
-                }
                 
             </div>
             
