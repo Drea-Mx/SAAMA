@@ -96,10 +96,11 @@ const PentHouse = ({depaInfo, depa01, setDepa01}) => {
                         <div className='bot'>
                             <p>Si te interesa este departamento envía un mensaje desde nuestro formulario y uno de nuestros asesores se pondrá en contacto contigo:</p>
                             <form  
-                                name='penthouse' 
+                                name='Pent House Form' 
                                 netlify
                                 action="/success/"
                                 >
+                                <input type="hidden" name="form-name" value="Pent House Form" />
                                 <input type="hidden"  placeholder='Nombre' name='nombreDepa' value={depaInfo.codigoDepa} />
                                 <input type='text' placeholder='Nombre' name='nombre' />
                                 <input type='email' placeholder='Correo electrónico' name='email' />
