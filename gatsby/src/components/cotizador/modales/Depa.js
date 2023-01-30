@@ -61,7 +61,8 @@ const Depa = ({depaInfo, depa01, setDepa01}) => {
                             <p>Si te interesa este departamento envía un mensaje desde nuestro formulario y uno de nuestros asesores se pondrá en contacto contigo:</p>
                             <form
                                 name='Depas Form' 
-                                netlify
+                                method="POST"
+                                data-netlify="true"
                                 action="/success/"
                                 >
                                 <input type="hidden" name="form-name" value="Depas Form" />
