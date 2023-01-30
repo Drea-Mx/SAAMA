@@ -63,7 +63,7 @@ const Depa = ({depaInfo, depa01, setDepa01}) => {
                                 name='Depas Form' 
                                 method="POST"
                                 data-netlify="true"
-                                action="/success/"
+                                action="/success"
                                 >
                                 <input type="hidden" name="form-name" value="Depas Form" />
                                 <input type="hidden"  placeholder='Nombre' name='nombreDepa' value={depaInfo.codigoDepa} />

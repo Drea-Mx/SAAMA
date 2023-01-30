@@ -99,7 +99,7 @@ const PentHouse = ({depaInfo, depa01, setDepa01}) => {
                                 name='Pent House Form' 
                                 method="POST"
                                 data-netlify="true"
-                                action="/success/"
+                                action="/success"
                                 >
                                 <input type="hidden" name="form-name" value="Pent House Form" />
                                 <input type="hidden"  placeholder='Nombre' name='nombreDepa' value={depaInfo.codigoDepa} />
