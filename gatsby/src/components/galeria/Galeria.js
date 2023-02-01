@@ -58,13 +58,15 @@ const Galeria = () => {
 
                 <Slider {...settings}>
                     <div className="slide">
-                        <StaticImage
-                            src="../../assets/images/galeria/001.jpg"
-                            alt="SAAMA"
-                            placeholder="blurred"
-                            layout="FULL_WIDTH"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <Link href="/galeria/001.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/001.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
+                            />
+                        </Link>
                     </div>
                     <div className="slide">
                         <StaticImage
@@ -192,7 +194,7 @@ const Galeria = () => {
                 </Slider>
             </motion.div>
 
-            <Link to='/cotizador'>
+            <Link to='/cotizador' className="arrow">
                 ↓
             </Link>
         </UbicacionContainer>
@@ -205,7 +207,7 @@ const UbicacionContainer = styled.section`
     position: relative;
     z-index: 1;
     margin-bottom: 100px;
-    a {
+    a.arrow {
         position: relative;
         display: block;
         width: 50px;

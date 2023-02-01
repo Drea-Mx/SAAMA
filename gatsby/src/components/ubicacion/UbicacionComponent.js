@@ -44,9 +44,9 @@ const UbicacionComponent = () => {
                 </div>
                 </div>
             </motion.div>
-            <AniLink cover bg="#2E331E" direction="up" to='/amenidades'>
+            <AniLink cover bg="#2E331E" direction="up" to='/numeralia'>
                 ↓
-                </AniLink>
+            </AniLink>
         </UbicacionContainer>
     )
 }

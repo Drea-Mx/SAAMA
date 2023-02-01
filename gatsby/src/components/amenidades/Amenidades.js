@@ -135,7 +135,7 @@ const Amenidades = () => {
                 </div>
 
             </div>
-            <Link to='/numeralia'>
+            <Link to='/galeria'>
                 ↓
             </Link>
         </UbicacionContainer>

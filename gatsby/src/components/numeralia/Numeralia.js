@@ -38,7 +38,7 @@ const Numeralia = () => {
             </motion.div>
             <AniLink cover bg="#2E331E" direction="up" to='/amenidades'>
                 ↓
-                </AniLink>
+            </AniLink>
         </UbicacionContainer>
     )
 }

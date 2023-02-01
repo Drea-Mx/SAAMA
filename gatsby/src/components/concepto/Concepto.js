@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
+import { Link } from "gatsby";
 
 const Concepto = () => {
     return(
@@ -37,7 +38,11 @@ const Concepto = () => {
                     placeholder="blurred"
                     style={{ height: "100%", width: "100%" }}
                 />
+                <Link to='/ubicacion' className="arrow">
+                    ↓
+                </Link>
             </motion.div>
+            
         </ConceptoContainer>
     )
 }
@@ -84,6 +89,19 @@ const ConceptoContainer = styled.section`
                 @media (max-width: 780px) {
                     font-size: 1.5rem;
                 }
+            }
+        }
+    }
+    .bot {
+        position: relative;
+        a.arrow {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            color: var(--white);
+            font-size: 3rem;
+            @media (max-width: 780px) {
+                top: 50px;
             }
         }
     }
