@@ -69,123 +69,144 @@ const Galeria = () => {
                         </Link>
                     </div>
                     <div className="slide">
-                        <StaticImage
-                            src="../../assets/images/galeria/002.jpg"
-                            alt="SAAMA"
-                            placeholder="blurred"
-                            layout="FULL_WIDTH"
-                            style={{ height: "100%", width: "100%" }}
-                        />
+                        <Link href="/galeria/002.webp" target='_blank'>
+
+                            <StaticImage
+                                src="../../assets/images/galeria/002.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
+                            />
+
+                        </Link>
                     </div>
                     <div className="slide">
-                        <StaticImage
-                            src="../../assets/images/galeria/003.jpg"
-                            alt="SAAMA"
-                            placeholder="blurred"
-                            layout="FULL_WIDTH"
-                            style={{ height: "100%", width: "100%" }}
+                        <Link href="/galeria/003.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/003.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
 
-                        />
+                            />
+                        </Link>
+                        
                     </div>
                     <div className="slide">
-                        <StaticImage
-                            src="../../assets/images/galeria/004.jpg"
-                            alt="SAAMA"
-                            placeholder="blurred"
-                            layout="FULL_WIDTH"
-                            style={{ height: "100%", width: "100%" }}
+                        <Link href="/galeria/004.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/004.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
 
-                        />
+                            />
+                        </Link>
+                        
                     </div>
                     <div className="slide">
-                        <StaticImage
-                            src="../../assets/images/galeria/005.jpg"
-                            alt="SAAMA"
-                            placeholder="blurred"
-                            layout="FULL_WIDTH"
-                            style={{ height: "100%", width: "100%" }}
+                        <Link href="/galeria/005.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/005.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
 
-                        />
+                            />
+                        </Link>
                     </div>
                     <div className="slide">
-                        <StaticImage
-                            src="../../assets/images/galeria/006.jpg"
-                            alt="SAAMA"
-                            placeholder="blurred"
-                            layout="FULL_WIDTH"
-                            style={{ height: "100%", width: "100%" }}
+                        <Link href="/galeria/006.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/006.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
 
-                        />
+                            />
+                        </Link>
                     </div>
                     <div className="slide">
-                        <StaticImage
-                            src="../../assets/images/galeria/006.png"
-                            alt="SAAMA"
-                            placeholder="blurred"
-                            layout="FULL_WIDTH"
-                            style={{ height: "100%", width: "100%" }}
+                        <Link href="/galeria/007.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/007.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
 
-                        />
+                            />
+                        </Link>
                     </div>
                     <div className="slide">
-                        <StaticImage
-                            src="../../assets/images/galeria/007.jpg"
-                            alt="SAAMA"
-                            placeholder="blurred"
-                            layout="FULL_WIDTH"
-                            style={{ height: "100%", width: "100%" }}
+                        <Link href="/galeria/008.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/008.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
 
-                        />
+                            />
+                        </Link>
+
                     </div>
                     <div className="slide">
-                        <StaticImage
-                            src="../../assets/images/galeria/008.jpg"
-                            alt="SAAMA"
-                            placeholder="blurred"
-                            layout="FULL_WIDTH"
-                            style={{ height: "100%", width: "100%" }}
+                        <Link href="/galeria/009.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/009.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
 
-                        />
+                            />
+                        </Link>
+
                     </div>
                     <div className="slide">
-                        <StaticImage
-                            src="../../assets/images/galeria/009.jpg"
-                            alt="SAAMA"
-                            placeholder="blurred"
-                            layout="FULL_WIDTH"
-                            style={{ height: "100%", width: "100%" }}
+                        <Link href="/galeria/010.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/010.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
 
-                        />
+                            />
+                        </Link>
+
                     </div>
                     <div className="slide">
-                        <StaticImage
-                            src="../../assets/images/galeria/010.jpg"
-                            alt="SAAMA"
-                            placeholder="blurred"
-                            layout="FULL_WIDTH"
-                            style={{ height: "100%", width: "100%" }}
+                        <Link href="/galeria/011.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/011.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
 
-                        />
+                            />
+                        </Link>
+
                     </div>
                     <div className="slide">
-                        <StaticImage
-                            src="../../assets/images/galeria/011.jpg"
-                            alt="SAAMA"
-                            placeholder="blurred"
-                            layout="FULL_WIDTH"
-                            style={{ height: "100%", width: "100%" }}
+                        <Link href="/galeria/012.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/012.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
 
-                        />
-                    </div>
-                    <div className="slide">
-                        <StaticImage
-                            src="../../assets/images/galeria/012.jpg"
-                            alt="SAAMA"
-                            placeholder="blurred"
-                            layout="FULL_WIDTH"
-                            style={{ height: "100%", width: "100%" }}
+                            />
+                        </Link>
 
-                        />
                     </div>
                 
                     

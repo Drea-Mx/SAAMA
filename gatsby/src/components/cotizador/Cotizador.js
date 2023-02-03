@@ -1132,7 +1132,7 @@ const CotizadorContainer = styled.section`
             font-size: 28px;
         }
         .image {
-            width: 300px;
+            width: 350px;
             margin: 50px auto;
             position: relative;
             .buttons {
@@ -1147,144 +1147,144 @@ const CotizadorContainer = styled.section`
                     font-size: 0;
                 }
                 .depa01 {
-                    width: 93px;
-                    height: 38px;
+                    width: 109px;
+                    height: 44px;
                     background-color: #808642;
-                    right: 47px;
-                    bottom: 11px;
+                    right: 55px;
+                    bottom: 13px;
                 }
                 .depa02 {
-                    width: 93px;
-                    height: 38px;
+                    width: 109px;
+                    height: 44px;
                     background-color: #808642;
-                    left: 44px;
-                    bottom: 11px;
+                    left: 50px;
+                    bottom: 13px;
                 }
                 .depa101 {
-                    width: 93px;
-                    height: 33px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    right: 47px;
-                    bottom: 52px;
+                    right: 55px;
+                    bottom: 60px;
                 }
                 .depa102 {
-                    width: 93px;
-                    height: 33px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    left: 44px;
-                    bottom: 52px;
+                    left: 50px;
+                    bottom: 60px;
                 }
                 .depa201 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    right: 47px;
-                    bottom: 89px;
+                    right: 55px;
+                    bottom: 104px;
                 }
                 .depa202 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    left: 44px;
-                    bottom: 89px;
+                    left: 50px;
+                    bottom: 104px;
                 }
                 .depa301 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    right: 47px;
-                    bottom: 126.5px;
+                    right: 55px;
+                    bottom: 147px;
                 }
                 .depa302 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #E29C25;
-                    left: 44px;
-                    bottom: 126.5px;
+                    left: 50px;
+                    bottom: 147px;
                 }
                 .depa401 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    right: 47px;
-                    bottom: 164px;
+                    right: 55px;
+                    bottom: 191px;
                 }
                 .depa402 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    left: 44px;
-                    bottom: 164px;
+                    left: 50px;
+                    bottom: 191px;
                 }
                 .depa501 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    right: 47px;
-                    bottom: 201px;
+                    right: 55px;
+                    bottom: 234px;
                 }
                 .depa502 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #E29C25;
-                    left: 44px;
-                    bottom: 201px;
+                    left: 50px;
+                    bottom: 234px;
                 }
                 .depa601 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    right: 47px;
-                    bottom: 238.5px;
+                    right: 55px;
+                    bottom: 280px;
                 }
                 .depa602 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    left: 44px;
-                    bottom: 238.5px;
+                    left: 50px;
+                    bottom: 280px;
                 }
                 .depa701 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    right: 47px;
-                    bottom: 275.5px;
+                    right: 55px;
+                    bottom: 322px;
                 }
                 .depa702 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    left: 44px;
-                    bottom: 275.5px;
+                    left: 50px;
+                    bottom: 322px;
                 }
                 .depaPHA-1 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    right: 47px;
-                    bottom: 313px;
+                    right: 55px;
+                    bottom: 366px;
                 }
                 .depaPHA-2 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    right: 47px;
-                    bottom: 350px;
+                    right: 55px;
+                    bottom: 409px;
                 }
                 .depaPHB-1 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    left: 44px;
-                    bottom: 313px;
+                    left: 50px;
+                    bottom: 366px;
                 }
                 .depaPHB-2 {
-                    width: 93px;
-                    height: 34px;
+                    width: 109px;
+                    height: 38px;
                     background-color: #808642;
-                    left: 44px;
-                    bottom: 350px;
+                    left: 50px;
+                    bottom: 409px;
                 }
             }
         }

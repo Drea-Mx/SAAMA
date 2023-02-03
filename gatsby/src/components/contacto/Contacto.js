@@ -26,15 +26,18 @@ const Contacto = () => {
                 <div className="iz">
                     <h2>DEJA TUS DATOS</h2>
                     <h2>Y DESCARGA EL BROCHURE</h2>
-                    <form>
+                    <form name='Formulario Contacto'
+                        netlify
+                        action='/BROCHURE_SAAMA_241122_ESP.pdf'
+                    >
                         <input placeholder="Escribe tu nombre" type='text' name='nombre' />
                         <input placeholder="Escribe tu correo electrónico" type='mail' name='mail' />
                         <input placeholder="Escribe tu número de teléfono" type='text' name='tel' />
                         <input placeholder="Escribe tu ciudad" type='text' name='ciudad' />
                         <select name="interes" id="interes">
-                            <option value="opcion1">Interés</option>
-                            <option value="opcion2">Opción2</option>
-                            <option value="opcion3">Opción3</option>
+                            <option value="interes">Interés</option>
+                            <option value="residente">Residente</option>
+                            <option value="sectorInmobiliario">Sector Inmobiliario</option>
 
                         </select>
                         <button type='submit'>Descargar</button>
@@ -42,20 +45,17 @@ const Contacto = () => {
                 </div>
                 <div className="de">
                     <div className="contacto1 contacto">
-                        <h3>ADRIANA CEBALLOS</h3>
-                        <h3>999 292 1800</h3>
-                        <a href="mailto:adriana.ceballos@jll.com">adriana.ceballos@jll.com</a>
-                    </div>
-                    <div className="contacto2 contacto">
-                        <h3>MARIANA CABALLERO</h3>
-                        <h3>999 389 7077</h3>
-                        <a href="mailto:mariana.caballero@jll.com">mariana.caballero@jll.com</a>
+                        <h3>ATENCIÓN EMPORIUM</h3>
+                        <h3>999 458 0265</h3>
+                        <a href="mailto:info@mbemporium.com">info@mbemporium.com</a>
                     </div>
                 </div>
             </motion.div>
                 
             <div className="logos">
-                <img src="/logos.svg" alt='JLL ARKHAM' />
+                <img src="/emporium.svg" alt='Emporium' />
+                <img src="/arkham.svg" alt='Arkham' />
+                <img src="/edifor.svg" alt='Edifor' />
             </div>
             <a className="aviso" href='/avisoDeProvacidad'>AVISO DE PRIVACIDAD</a>
         </UbicacionContainer>
@@ -126,6 +126,7 @@ const UbicacionContainer = styled.section`
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            justify-content: center;
             @media (max-width: 900px) {
                 flex-direction: row;
                 width: 100%;
@@ -141,17 +142,28 @@ const UbicacionContainer = styled.section`
                 border-radius: 30px;
                 @media (max-width: 900px) {
                     font-size: 1.5rem;
-                    padding: 20px;
+                    padding: 50px;
                     margin-bottom: 30px;
                 }
             }
         }
     }
     .logos {
-        width: 20%;
         margin: 50px auto 50px;
-        @media (max-width: 700px) {
-            width: 50%;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 150px;
+            margin-right: 20px;
+            margin-left: 20px;
+            @media (max-width: 650px) {
+                width: 250px;
+                margin-bottom: 50px;
+            }
+        }
+        @media (max-width: 650px) {
+            flex-direction: column;
+            align-items: center;
         }
     }
 

@@ -8,11 +8,126 @@ const Header = ({dark}) => {
     const [nav, showNav] = useState(false)
 
 
+const HeaderContainer = styled.nav`
+background-color: ${dark ? 'transparent' : 'var(--white)'};
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 5;
+transition: all 350ms ease-in-out;
+    @media (max-width: 780px) {
+        top: 0;
+        overflow: hidden;
+        border-bottom: solid 1px #2E331F;
+        background-color: #EBE6DD;
+        padding: 20px 50px;
+    }
+    .logoMov {
+        display: none;
+        @media (max-width: 780px) {
+            display: block;
+            width: 150px;
+            position: absolute;
+            top: 15px;
+            left: 30px;
+        }
+    }
+.ham {
+    display: none;
+    @media (max-width: 780px) {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #2E331F;
+            margin-bottom: 7px;
+        }
+    }
+}
+ul.dark {
+    a {
+        color: var(--white);
+        @media (max-width: 780px) {
+            color: var(--green);
+        }
+        .line {
+            background-color: var(--white);
+            color: var(--green);
+        }
+    }
+}
+ul {
+    display: flex;
+    font-size: 1rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    @media (max-width: 1200px) {
+        font-size: .8rem;
+        display: inline-block;
+    }
+    @media (max-width: 780px) {
+        width: 100%;
+        margin-top: 100px;
+        font-size: 1.5rem;
+    }
+    
+    .logo {
+        width: 200px;
+        @media (max-width: 1200px) {
+            width: 150px;
+        }
+        @media (max-width: 780px) {
+            display: none;
+        }
+    }
+    .active {
+        .line {
+            width: 100% !important;
+        }
+    }
+    li {
+        margin-right: 20px;
+        position: relative;
+        display: inline-block;
+        @media (max-width: 1200px) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 780px) {
+            display: block;
+            text-align: center;
+            margin: 0 auto 30px;
+            width: 300px;
+        }
+        
+        .line {
+            position: absolute;
+            bottom: -8px;
+            width: 0%;
+            height: 4px;
+            background-color: #2E331F;
+            transition: width 250ms ease-in-out;
+        }
+        &:hover {
+            .line {
+                width: 100%;
+            }
+        }
+    }
+}
+`
 
     return(
         <HeaderContainer 
         style={{
-            height: nav ? '600px' : '120px',
+            height: nav ? '600px' : '80px',
             backgroundColor: nav ? '#EBE6DD' : '',
           }}
         >
@@ -74,119 +189,11 @@ const Header = ({dark}) => {
                 
         </HeaderContainer>
     )
-}
-
-
-const HeaderContainer = styled.nav`
-position: fixed;
-width: 100%;
-top: 0;
-padding: 50px 50px;
-z-index: 5;
-transition: all 350ms ease-in-out;
-    @media (max-width: 780px) {
-        top: 0;
-        height: 100px;
-        overflow: hidden;
-        border-bottom: solid 1px #2E331F;
-        background-color: #EBE6DD;
-    }
-    .logoMov {
-        display: none;
-        @media (max-width: 780px) {
-            display: block;
-            width: 150px;
-            position: absolute;
-            top: 30px;
-            left: 30px;
-        }
-    }
-.ham {
-    display: none;
-    @media (max-width: 780px) {
-        display: block;
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        right: 30px;
-        top: 40px;
-        .line {
-            width: 100%;
-            height: 2px;
-            background-color: #2E331F;
-            margin-bottom: 7px;
-        }
-    }
-}
-ul.dark {
-    a {
-        color: var(--white);
-        .line {
-            background-color: var(--white);
-        }
-    }
-}
-ul {
-    display: flex;
-    font-size: 1rem;
-    max-width: 1500px;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
-    @media (max-width: 1200px) {
-        font-size: .8rem;
-        display: inline-block;
-    }
-    @media (max-width: 780px) {
-        width: 100%;
-        margin-top: 150px;
-        font-size: 1.5rem;
-    }
     
-    .logo {
-        width: 200px;
-        @media (max-width: 1200px) {
-            width: 150px;
-        }
-        @media (max-width: 780px) {
-            display: none;
-        }
-    }
-    .active {
-        .line {
-            width: 100% !important;
-        }
-    }
-    li {
-        margin: 0 20px;
-        position: relative;
-        display: inline-block;
-        @media (max-width: 1200px) {
-            margin-bottom: 20px;
-        }
-        @media (max-width: 780px) {
-            display: block;
-            text-align: center;
-            margin: 0 auto 30px;
-            width: 300px;
-        }
-        
-        .line {
-            position: absolute;
-            bottom: -8px;
-            width: 0%;
-            height: 4px;
-            background-color: #2E331F;
-            transition: width 250ms ease-in-out;
-        }
-        &:hover {
-            .line {
-                width: 100%;
-            }
-        }
-    }
 }
-`
+
+
+
 
 
 export default Header

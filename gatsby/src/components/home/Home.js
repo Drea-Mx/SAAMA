@@ -102,7 +102,7 @@ const HomeContainer = styled.section`
         .welcome {
             position: relative;
             z-index: 1;
-            width: 100%;
+            width: 85%;
             margin-top: -80px;
             @media (max-width: 780px) {
                 margin-top: -40px;

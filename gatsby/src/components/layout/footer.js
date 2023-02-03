@@ -66,7 +66,7 @@ const FooterContainer = styled.footer`
         background-color: #EBE6DD;
         position: fixed;
         bottom: 0;
-        height: 150px;
+        height: 80px;
         border-top: solid 1px #2E331E;
         z-index: 4;
     }
@@ -78,6 +78,7 @@ const FooterContainer = styled.footer`
         z-index: 1;
         @media (max-width: 780px) {
             position: absolute;
+            bottom: 15px;
         }
         a {
             display: block;
@@ -105,7 +106,7 @@ const FooterContainer = styled.footer`
         bottom: 50px;
         z-index: 1;
         @media (max-width: 780px) {
-            bottom: 30px;
+            bottom: 10px;
             position: absolute;
         }
         a {
@@ -114,7 +115,7 @@ const FooterContainer = styled.footer`
             margin-right: 20px;
             animation: grow 1500ms ease-in-out 2s infinite forwards;
             @media (max-width: 780px) {
-                width: 80px;
+                width: 55px;
             }
         }
     }

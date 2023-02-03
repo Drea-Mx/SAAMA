@@ -38,10 +38,12 @@ const Concepto = () => {
                     placeholder="blurred"
                     style={{ height: "100%", width: "100%" }}
                 />
-                <Link to='/ubicacion' className="arrow">
-                    ↓
-                </Link>
+                
             </motion.div>
+
+            <Link to='/ubicacion' className="arrow">
+                ↓
+            </Link>
             
         </ConceptoContainer>
     )
@@ -50,6 +52,17 @@ const Concepto = () => {
 
 const ConceptoContainer = styled.section`
     margin-top: 130px;
+
+    a.arrow {
+            position: fixed !important;
+            bottom: 100px;
+            left: 50%;
+            color: var(--white);
+            font-size: 3rem;
+            @media (max-width: 780px) {
+                top: 50px;
+            }
+        }
     @media (max-width: 850px) {
         margin-top: 150px;
     }
@@ -94,16 +107,7 @@ const ConceptoContainer = styled.section`
     }
     .bot {
         position: relative;
-        a.arrow {
-            position: absolute;
-            top: 100px;
-            left: 50%;
-            color: var(--white);
-            font-size: 3rem;
-            @media (max-width: 780px) {
-                top: 50px;
-            }
-        }
+        
     }
     .container {
         padding: 0 20px;
