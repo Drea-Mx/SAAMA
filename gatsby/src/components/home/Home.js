@@ -46,10 +46,14 @@ const Home = () => {
 
 const HomeContainer = styled.section`
     width: 100vw;
+    height: 100vh;
     position: relative;
     text-align: center;
     margin-bottom: 50px;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @media (max-width: 780px) {
         margin-bottom: 100px;
     }
@@ -76,12 +80,15 @@ const HomeContainer = styled.section`
     }
 
     .image {
-        max-width: 880px;
-        margin: 150px auto 0;
+        max-width: 50%;
+        margin: 0 auto;
         padding: 0 50px;
         box-sizing: content-box;
         @media (max-width: 780px) {
             margin: 100px auto 0;
+            max-width: 100%;
+            width: 100%;
+            padding: 0;
         }
         .movil {
             display: none;
