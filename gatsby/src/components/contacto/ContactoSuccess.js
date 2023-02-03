@@ -64,6 +64,7 @@ const ContactoSuccess = () => {
                 <img src="/emporium.svg" alt='Emporium' />
                 <img src="/arkham.svg" alt='Arkham' />
                 <img src="/edifor.svg" alt='Edifor' />
+                <img src="/geyluk.svg" alt='Edifor' />
             </div>
             <a className="aviso" href='/avisoDeProvacidad'>AVISO DE PRIVACIDAD</a>
         </UbicacionContainer>
