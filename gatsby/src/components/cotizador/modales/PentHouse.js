@@ -152,6 +152,7 @@ const Container = styled.section`
         @media (max-width: 1000px) {
             height: 80vh;
             overflow-y: scroll;
+            padding: 25px;
         }
         button.close {
             font-weight: bolder;
@@ -159,6 +160,10 @@ const Container = styled.section`
             position: absolute;
             top: 30px;
             right: 40px;
+            @media (max-width: 680px) {
+                top: 10px !important;
+                right: 20px !important;
+            }
         }
         h2 {
             text-align: center;

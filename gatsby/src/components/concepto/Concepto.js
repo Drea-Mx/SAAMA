@@ -68,6 +68,7 @@ const ConceptoContainer = styled.section`
     }
     @media (max-width: 780px) {
         margin-top: 100px;
+        margin-bottom: 200px;
     }
     .top {
         display: flex;

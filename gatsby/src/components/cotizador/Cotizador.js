@@ -1107,6 +1107,11 @@ const Arrow = styled(Link)`
     z-index: 1;
     @media (max-width: 680px) {
         font-size: 35px;
+        position: static;
+        margin-bottom: 150px;
+        margin-top: 0;
+        width: 100%;
+        text-align: center;
     }
 `
 
@@ -1294,7 +1299,7 @@ const CotizadorContainer = styled.section`
         text-align: center;
         @media (max-width: 850px) {
             width: 100%;
-            margin-bottom: 200px;
+            margin-bottom: 50px;
         }
         h2 {
             font-size: 1.5rem;

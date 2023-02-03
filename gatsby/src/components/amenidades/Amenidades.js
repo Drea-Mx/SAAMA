@@ -173,6 +173,11 @@ const UbicacionContainer = styled.section`
         width: 100%;
         box-sizing: border-box;
         position: relative;
+        @media (max-width: 680px) {
+            transform: rotate(-90deg) scale(3);
+            margin-top: 450px;
+            margin-bottom: 450px;
+        }
         .numeros {
             position: absolute;
             top: 0;
@@ -199,6 +204,9 @@ const UbicacionContainer = styled.section`
                     position: absolute;
                     top: 100%;
                     z-index: 5;
+                    @media (max-width: 680px) {
+                        transform: translate(-50%, -40%) scale(0.5);
+                    }
                 }
                 &:nth-child(odd) {
                     animation: grow 850ms ease-in-out infinite forwards;

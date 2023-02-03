@@ -118,6 +118,7 @@ const Container = styled.section`
         @media (max-width: 850px) {
             height: 90vh;
             overflow-y: scroll;
+            padding: 50px 20px;
         }
         button.close {
             font-weight: bolder;
@@ -125,6 +126,10 @@ const Container = styled.section`
             position: absolute;
             top: 30px;
             right: 40px;
+            @media (max-width: 680px) {
+                top: 10px !important;
+                right: 20px !important;
+            }
         }
         h2 {
             text-align: center;
@@ -135,6 +140,11 @@ const Container = styled.section`
             padding-top: 50px;
             @media (max-width: 850px) {
                 flex-direction: column;
+                display: grid;
+            }
+            @media (max-width: 680px) {
+                padding-top: 20px;
+
             }
             .iz {
                 width: 80%;
@@ -155,6 +165,7 @@ const Container = styled.section`
                     margin-bottom: 50px;
                     @media (max-width: 850px) {
                         margin-bottom: 50px;
+                        display: block;
                     }
                 }
                 .info {
@@ -201,6 +212,9 @@ const Container = styled.section`
                         column-count: 2;
                         list-style: decimal-leading-zero;
                         margin-left: 20px;
+                        @media (max-width: 680px) {
+                            column-count: 1;
+                        }
                         li {
                             font-family: var(--slim);
                             font-size: 1rem;

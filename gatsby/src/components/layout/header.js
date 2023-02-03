@@ -20,7 +20,7 @@ transition: all 350ms ease-in-out;
         overflow: hidden;
         border-bottom: solid 1px #2E331F;
         background-color: #EBE6DD;
-        padding: 20px 50px;
+        padding: 20px;
     }
     .logoMov {
         display: none;
@@ -77,6 +77,7 @@ ul {
         width: 100%;
         margin-top: 100px;
         font-size: 1.5rem;
+        padding: 20px 0;
     }
     
     .logo {
@@ -104,7 +105,6 @@ ul {
             display: block;
             text-align: center;
             margin: 0 auto 30px;
-            width: 300px;
         }
         
         .line {

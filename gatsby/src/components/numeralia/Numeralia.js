@@ -53,6 +53,7 @@ const UbicacionContainer = styled.section`
     }
     @media (max-width: 780px) {
         margin-bottom: 150px;
+        margin-top: 120px;
     }
     .top {
         display: flex;
@@ -71,7 +72,8 @@ const UbicacionContainer = styled.section`
                     padding: 50px;
             }
             @media (max-width: 780px) {
-                width: 70%;
+                width: 100%;
+                padding: 20px;
             }
                 
             .image {
@@ -86,6 +88,7 @@ const UbicacionContainer = styled.section`
                 }
             @media (max-width: 780px) {
                 width: 100%;
+                padding: 20px;
             }
                 img {
                     margin-bottom: 50px;
@@ -112,8 +115,12 @@ const UbicacionContainer = styled.section`
         font-size: 60px;
 
         z-index: 5;
-        @media (max-width: 680px) {
+        @media (max-width: 780px) {
             font-size: 35px;
+            position: static;
+            transform: none;
+            width: 100%;
+            text-align: center;
         }
     }
 `

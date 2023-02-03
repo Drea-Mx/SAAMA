@@ -51,7 +51,7 @@ const HomeContainer = styled.section`
     margin-bottom: 50px;
     z-index: 1;
     @media (max-width: 780px) {
-        margin-bottom: 200px;
+        margin-bottom: 100px;
     }
     a {
         position: relative;
@@ -64,13 +64,14 @@ const HomeContainer = styled.section`
         z-index: 5;
         @media (max-width: 680px) {
             font-size: 35px;
-            display: none;
         }
     }
     h2 {
         font-size: 35px;
-        @media (max-width: 680px) {
+        @media (max-width: 750px) {
             font-size: 24px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
 
@@ -80,16 +81,13 @@ const HomeContainer = styled.section`
         padding: 0 50px;
         box-sizing: content-box;
         @media (max-width: 780px) {
-            margin: 150px auto 0;
-        }
-        @media (max-width: 680px) {
-            margin: 150px auto 0;
+            margin: 100px auto 0;
         }
         .movil {
             display: none;
             @media (max-width: 780px) {
                 display: block;
-                height: 500px !important;
+                height: 400px !important;
             }
         }
         video {
