@@ -29,8 +29,9 @@ const Contacto = () => {
                     <form name='Formulario Contacto'
                         method="POST"
                         data-netlify="true"
-                        action='/contactoSuccess/'
+                        action='/contactoSuccess'
                     >
+                        <input type="hidden" name="form-name" value="Formulario Contacto"></input>
                         <input placeholder="Escribe tu nombre" type='text' name='nombre' />
                         <input placeholder="Escribe tu correo electrónico" type='mail' name='mail' />
                         <input placeholder="Escribe tu número de teléfono" type='text' name='tel' />
