@@ -1,11 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
 
-const Contacto = () => {
+const ContactoSuccess = () => {
+
+
+    const [close, setClose] = useState(true);
+
 
     return(
+        <>
+        
         <UbicacionContainer>
             <div className="fondo">
                 <StaticImage
@@ -60,8 +66,61 @@ const Contacto = () => {
             </div>
             <a className="aviso" href='/avisoDeProvacidad'>AVISO DE PRIVACIDAD</a>
         </UbicacionContainer>
+        {
+            close ? 
+                <Success>
+                    <div className='cont'>
+                        <button className='close' onClick={() => setClose(!close)}>X</button>
+                        <h2>Formulario Enviado Correctamente</h2>
+                        <a target='_blank'  
+                            download
+                            href='/BROCHURE_SAAMA_241122_ESP.pdf'
+                        >
+                            Descargar Brochure</a>
+
+                    </div>
+                </Success>
+                :
+                ''
+        }
+        </>
+
     )
 }
+
+
+
+const Success = styled.div`
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    .cont {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 50px;
+        text-align: center;
+        button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            
+        }
+        a {
+            text-decoration: underline;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
+`
 
 const UbicacionContainer = styled.section`
     text-align: center;
@@ -176,4 +235,4 @@ const UbicacionContainer = styled.section`
     }
 `
 
-export default Contacto
+export default ContactoSuccess
