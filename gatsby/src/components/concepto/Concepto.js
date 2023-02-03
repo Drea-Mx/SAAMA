@@ -61,6 +61,12 @@ const ConceptoContainer = styled.section`
             font-size: 3rem;
             @media (max-width: 780px) {
                 top: 50px;
+                position: static !important;
+                filter: invert(1);
+                width: 100%;
+                text-align: center;
+                display: block;
+                margin-top: 40px;
             }
         }
     @media (max-width: 850px) {
@@ -68,7 +74,7 @@ const ConceptoContainer = styled.section`
     }
     @media (max-width: 780px) {
         margin-top: 100px;
-        margin-bottom: 200px;
+        margin-bottom: 130px;
     }
     .top {
         display: flex;
@@ -87,12 +93,14 @@ const ConceptoContainer = styled.section`
         }
         .iz {
             @media (max-width: 780px) {
-                width: 60%;
+                width: 100%;
+                padding: 20px;
             }
         }
         .de {
             @media (max-width: 780px) {
                 width: 100%;
+                padding: 20px;
             }
             p {
                 font-size: 1.7vw;

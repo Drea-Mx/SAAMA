@@ -1150,6 +1150,9 @@ const CotizadorContainer = styled.section`
                     position: absolute;
                     mix-blend-mode: multiply;
                     font-size: 0;
+                    @media (max-width: 850px) {
+                        opacity: 0.7;
+                    }
                 }
                 .depa01 {
                     width: 109px;

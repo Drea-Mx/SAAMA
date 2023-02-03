@@ -166,6 +166,8 @@ const UbicacionContainer = styled.section`
         width: 66px;
         @media (max-width: 780px) {
             width: 40px;
+            position: relative;
+            z-index: 2;
         }
     }
     .mapa {
@@ -175,8 +177,8 @@ const UbicacionContainer = styled.section`
         position: relative;
         @media (max-width: 680px) {
             transform: rotate(-90deg) scale(3);
-            margin-top: 450px;
-            margin-bottom: 450px;
+            margin-top: 550px;
+            margin-bottom: 550px;
         }
         .numeros {
             position: absolute;

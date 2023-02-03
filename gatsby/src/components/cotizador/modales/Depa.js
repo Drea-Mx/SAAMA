@@ -126,6 +126,7 @@ const Container = styled.section`
             position: absolute;
             top: 30px;
             right: 40px;
+            color: black;
             @media (max-width: 680px) {
                 top: 10px !important;
                 right: 20px !important;
