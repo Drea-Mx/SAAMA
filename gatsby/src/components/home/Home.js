@@ -88,7 +88,9 @@ const HomeContainer = styled.section`
             margin: 100px auto 0;
             max-width: 100%;
             width: 100%;
-            padding: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-top: 0;
         }
         .movil {
             display: none;
