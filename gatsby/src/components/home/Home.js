@@ -46,16 +46,14 @@ const Home = () => {
 
 const HomeContainer = styled.section`
     width: 100vw;
-    height: 100vh;
     position: relative;
     text-align: center;
     margin-bottom: 50px;
     z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-top: 150px;
     @media (max-width: 780px) {
         margin-bottom: 100px;
+        margin-top: 100px;
     }
     a {
         position: relative;
