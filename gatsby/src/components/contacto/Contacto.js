@@ -27,7 +27,8 @@ const Contacto = () => {
                     <h2>DEJA TUS DATOS</h2>
                     <h2>Y DESCARGA EL BROCHURE</h2>
                     <form name='Formulario Contacto'
-                        netlify
+                        method="POST"
+                        data-netlify="true"
                         action='/BROCHURE_SAAMA_241122_ESP.pdf'
                     >
                         <input placeholder="Escribe tu nombre" type='text' name='nombre' />
