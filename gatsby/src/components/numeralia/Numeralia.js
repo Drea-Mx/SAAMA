@@ -17,7 +17,7 @@ const Numeralia = () => {
                 <div className="iz">
                     <div className="image">
                         <StaticImage 
-                            src="../../assets/images/numeralia.jpg" 
+                            src="../../assets/images/FACHADA_FUGADA.webp" 
                             alt="SAAMA Departamentos" 
                             layout="fullWidth"
                             placeholder="blurred"
@@ -31,9 +31,9 @@ const Numeralia = () => {
                     <p>ubicados en la parte más alta.</p>
                     <br />
                     <br />
-                    <p>En total SAĀMA tiene 3,692 m2 de construcción,</p>
+                    <p>En total SAĀMA tiene 3,548 m2 de construcción,</p>
                     <p>distribuidos en un desarrollo de 10 niveles</p>
-                    <p>con 12 amenidades.</p>
+                    <p>con más de 14 amenidades</p>
                 </div>
             </motion.div>
             <AniLink cover bg="#2E331E" direction="up" to='/amenidades'>
@@ -68,6 +68,7 @@ const UbicacionContainer = styled.section`
         }
         .iz {
             padding: 100px;
+
             @media (max-width: 1200px) {
                     padding: 50px;
             }

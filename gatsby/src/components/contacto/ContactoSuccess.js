@@ -54,7 +54,7 @@ const ContactoSuccess = () => {
                 <div className="de">
                     <div className="contacto1 contacto">
                         <h3>ATENCIÓN EMPORIUM</h3>
-                        <h3>999 458 0265</h3>
+                        <h3>+52 1 999 458 0265</h3>
                         <a href="mailto:info@mbemporium.com">info@mbemporium.com</a>
                     </div>
                 </div>
@@ -63,8 +63,7 @@ const ContactoSuccess = () => {
             <div className="logos">
                 <img src="/emporium.svg" alt='Emporium' />
                 <img src="/arkham.svg" alt='Arkham' />
-                <img src="/edifor.svg" alt='Edifor' />
-                <img src="/geyluk.svg" alt='Edifor' />
+                <img src="/geyluk.svg" alt='geyluk' />
             </div>
             <a className="aviso" href='/avisoDeProvacidad'>AVISO DE PRIVACIDAD</a>
         </UbicacionContainer>

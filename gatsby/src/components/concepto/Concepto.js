@@ -32,7 +32,7 @@ const Concepto = () => {
                 transition={{ delay: .5, duration: 1 }}
             >
                 <StaticImage 
-                    src="../../assets/images/concepto.png" 
+                    src="../../assets/images/conjunto.webp" 
                     alt="SAAMA Departamentos" 
                     layout="fullWidth"
                     placeholder="blurred"
