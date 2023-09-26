@@ -208,6 +208,71 @@ const Galeria = () => {
                         </Link>
 
                     </div>
+                    <div className="slide">
+                        <Link href="/galeria/013.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/013.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
+
+                            />
+                        </Link>
+
+                    </div>
+                    <div className="slide">
+                        <Link href="/galeria/014.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/014.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
+
+                            />
+                        </Link>
+
+                    </div>
+                    <div className="slide">
+                        <Link href="/galeria/015.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/015.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
+
+                            />
+                        </Link>
+
+                    </div>
+                    <div className="slide">
+                        <Link href="/galeria/016.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/016.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
+
+                            />
+                        </Link>
+
+                    </div>
+                    <div className="slide">
+                        <Link href="/galeria/017.webp" target='_blank'>
+                            <StaticImage
+                                src="../../assets/images/galeria/017.jpg"
+                                alt="SAAMA"
+                                placeholder="blurred"
+                                layout="FULL_WIDTH"
+                                style={{ height: "100%", width: "100%" }}
+
+                            />
+                        </Link>
+
+                    </div>
                 
                     
 

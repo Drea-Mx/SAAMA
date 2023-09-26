@@ -14,7 +14,7 @@ const Cotizador = () => {
 
     // Depa 001
     const depa1 = {
-        titulo: 'DEPARTAMENTO 001',
+        titulo: 'DEPARTAMENTO GARDEN',
         arr: [
             'Cocina', 
             'Alacena', 
@@ -37,9 +37,9 @@ const Cotizador = () => {
             'Cuarto de lavado',
             'Baño de servicio',
         ],
-        plano: '/depas/001.png',
-        precio: '10,913,760.00',
-        codigoDepa: '001',
+        plano: '/depas/Garden.png',
+        precio: '8,364,000',
+        codigoDepa: 'GH1',
         nivel: 'Planta Baja',
         cajones: '2',
         espacios1: [
@@ -63,7 +63,7 @@ const Cotizador = () => {
     const [depa02, setDepa02] = useState(false);
 
     const depa2 = {
-        titulo: 'DEPARTAMENTO 002',
+        titulo: 'DEPARTAMENTO GARDEN',
         arr: [
             'Cocina', 
             'Comedor', 
@@ -86,9 +86,9 @@ const Cotizador = () => {
             'Baño de servicio',
             'Área de compresores',
         ],
-        plano: '/depas/002.png',
-        precio: '10,913,760.00',
-        codigoDepa: '002',
+        plano: '/depas/Garden.png',
+        precio: '8,364,000',
+        codigoDepa: 'GH2',
         nivel: 'Planta Baja',
         cajones: '2',
         espacios1: [
@@ -114,7 +114,7 @@ const Cotizador = () => {
     const [depa101, setDepa101] = useState(false);
 
     const depa101Info = {
-        titulo: 'DEPARTAMENTO 101',
+        titulo: 'DEPARTAMENTO PALMA',
         arr: [
             'Cocina', 
             'Comedor', 
@@ -137,8 +137,8 @@ const Cotizador = () => {
             'Baño de servicio',
             'Área de compresores',
         ],
-        plano: '/depas/101.png',
-        precio: '9,470,012.15',
+        plano: '/depas/Palma.png',
+        precio: '7,991,507.00',
         codigoDepa: '101',
         nivel: '1',
         cajones: '2',
@@ -164,7 +164,7 @@ const Cotizador = () => {
     const [depa102, setDepa102] = useState(false);
 
     const depa102Info = {
-        titulo: 'DEPARTAMENTO 102',
+        titulo: 'DEPARTAMENTO PALMA',
         arr: [
             'Cocina', 
             'Alacena / Bodega', 
@@ -187,8 +187,8 @@ const Cotizador = () => {
             'Área de compresores',
             'Baño de visitas',
         ],
-        plano: '/depas/102.png',
-        precio: '8,908,239.62',
+        plano: '/depas/Palma.png',
+        precio: '7,991,507.00',
         codigoDepa: '102',
         nivel: '1',
         cajones: '2',
@@ -213,7 +213,7 @@ const Cotizador = () => {
     const [depa201, setDepa201] = useState(false);
 
     const depa201Info = {
-        titulo: 'DEPARTAMENTO 201',
+        titulo: 'DEPARTAMENTO ACQUA',
         arr: [
             'Cocina', 
             'Comedor', 
@@ -234,8 +234,8 @@ const Cotizador = () => {
             'Baño de servicio',
             'Área de compresores',
         ],
-        plano: '/depas/201.png',
-        precio: '8,800,949.87',
+        plano: '/depas/Acqua.png',
+        precio: '7,310,279.95',
         codigoDepa: '201',
         nivel: '2-7',
         cajones: '2',
@@ -261,7 +261,7 @@ const Cotizador = () => {
     const [depa202, setDepa202] = useState(false);
 
     const depa202Info = {
-        titulo: 'DEPARTAMENTO 202',
+        titulo: 'DEPARTAMENTO ACQUA',
         arr: [
             'Cocina', 
             'Alacena / Bodega', 
@@ -282,8 +282,8 @@ const Cotizador = () => {
             'Baño de servicio',
             'Área de compresores',
         ],
-        plano: '/depas/202.png',
-        precio: '8,328,047.62',
+        plano: '/depas/Acqua.png',
+        precio: '7,310,279.95',
         codigoDepa: '202',
         nivel: '2-7',
         cajones: '2',
@@ -310,7 +310,7 @@ const Cotizador = () => {
           const [depa301, setDepa301] = useState(false);
 
           const depa301Info = {
-              titulo: 'DEPARTAMENTO 301',
+              titulo: 'DEPARTAMENTO ACQUA',
               arr: [
                   'Cocina', 
                   'Comedor', 
@@ -331,8 +331,8 @@ const Cotizador = () => {
                   'Baño de servicio',
                   'Área de compresores',
               ],
-              plano: '/depas/301.png',
-              precio: '8,906,561.26',
+              plano: '/depas/Acqua.png',
+              precio: '7,310,279.95',
               codigoDepa: '301',
               nivel: '2-7',
               cajones: '2',
@@ -361,7 +361,7 @@ const Cotizador = () => {
           const [depa302, setDepa302] = useState(false);
 
           const depa302Info = {
-              titulo: 'DEPARTAMENTO 302',
+              titulo: 'DEPARTAMENTO ACQUA',
               arr: [
                 'Cocina', 
                 'Alacena / Bodega', 
@@ -382,8 +382,8 @@ const Cotizador = () => {
                 'Baño de servicio',
                 'Área de compresores',
               ],
-              plano: '/depas/302.png',
-              precio: '8,427,984.19',
+              plano: '/depas/Acqua.png',
+              precio: '7,310,279.95',
               codigoDepa: '302',
               nivel: '2-7',
               cajones: '2',
@@ -411,7 +411,7 @@ const Cotizador = () => {
           const [depa401, setDepa401] = useState(false);
 
           const depa401Info = {
-              titulo: 'DEPARTAMENTO 401',
+              titulo: 'DEPARTAMENTO ACQUA',
               arr: [
                 'Cocina', 
                   'Comedor', 
@@ -432,8 +432,8 @@ const Cotizador = () => {
                   'Baño de servicio',
                   'Área de compresores',
               ],
-              plano: '/depas/401.png',
-              precio: '9,013,440.00',
+              plano: '/depas/Acqua.png',
+              precio: '7,310,279.95',
               codigoDepa: '401',
               nivel: '2-7',
               cajones: '2',
@@ -461,7 +461,7 @@ const Cotizador = () => {
           const [depa402, setDepa402] = useState(false);
 
           const depa402Info = {
-              titulo: 'DEPARTAMENTO 402',
+              titulo: 'DEPARTAMENTO ACQUA',
               arr: [
                 'Cocina', 
                 'Alacena / Bodega', 
@@ -482,8 +482,8 @@ const Cotizador = () => {
                 'Baño de servicio',
                 'Área de compresores',
               ],
-              plano: '/depas/402.png',
-              precio: '8,529,120.00',
+              plano: '/depas/Acqua.png',
+              precio: '7,310,279.95',
               codigoDepa: '402',
               nivel: '2-7',
               cajones: '2',
@@ -511,7 +511,7 @@ const Cotizador = () => {
           const [depa501, setDepa501] = useState(false);
 
           const depa501Info = {
-              titulo: 'DEPARTAMENTO 501',
+              titulo: 'DEPARTAMENTO ACQUA',
               arr: [
                 'Cocina', 
                 'Comedor', 
@@ -532,8 +532,8 @@ const Cotizador = () => {
                 'Baño de servicio',
                 'Área de compresores',
               ],
-              plano: '/depas/501.png',
-              precio: '9,121,601.28',
+              plano: '/depas/Acqua.png',
+              precio: '7,310,279.95',
               codigoDepa: '501',
               nivel: '2-7',
               cajones: '2',
@@ -560,7 +560,7 @@ const Cotizador = () => {
           const [depa502, setDepa502] = useState(false);
 
           const depa502Info = {
-              titulo: 'DEPARTAMENTO 502',
+              titulo: 'DEPARTAMENTO ACQUA',
               arr: [
                 'Cocina', 
                 'Alacena / Bodega', 
@@ -581,8 +581,8 @@ const Cotizador = () => {
                 'Baño de servicio',
                 'Área de compresores',
               ],
-              plano: '/depas/502.png',
-              precio: '8,631,469.44',
+              plano: '/depas/Acqua.png',
+              precio: '7,310,279.95',
               codigoDepa: '502',
               nivel: '2-7',
               cajones: '2',
@@ -609,7 +609,7 @@ const Cotizador = () => {
           const [depa601, setDepa601] = useState(false);
 
           const depa601Info = {
-              titulo: 'DEPARTAMENTO 601',
+              titulo: 'DEPARTAMENTO ACQUA',
               arr: [
                 'Cocina', 
                 'Comedor', 
@@ -630,8 +630,8 @@ const Cotizador = () => {
                 'Baño de servicio',
                 'Área de compresores',
               ],
-              plano: '/depas/601.png',
-              precio: '9,231,060.50',
+              plano: '/depas/Acqua.png',
+              precio: '7,310,279.95',
               codigoDepa: '601',
               nivel: '2-7',
               cajones: '2',
@@ -658,7 +658,7 @@ const Cotizador = () => {
           const [depa602, setDepa602] = useState(false);
 
           const depa602Info = {
-              titulo: 'DEPARTAMENTO 602',
+              titulo: 'DEPARTAMENTO ACQUA',
               arr: [
                 'Cocina', 
                 'Alacena / Bodega', 
@@ -679,8 +679,8 @@ const Cotizador = () => {
                 'Baño de servicio',
                 'Área de compresores',
               ],
-              plano: '/depas/602.png',
-              precio: '8,735,047.07',
+              plano: '/depas/Acqua.png',
+              precio: '7,310,279.95',
               codigoDepa: '602',
               nivel: '2-7',
               cajones: '2',
@@ -707,7 +707,7 @@ const Cotizador = () => {
           const [depa701, setDepa701] = useState(false);
 
           const depa701Info = {
-              titulo: 'DEPARTAMENTO 701',
+              titulo: 'DEPARTAMENTO ACQUA',
               arr: [
                 'Cocina', 
                 'Comedor', 
@@ -728,8 +728,8 @@ const Cotizador = () => {
                 'Baño de servicio',
                 'Área de compresores',
               ],
-              plano: '/depas/701.png',
-              precio: '9,341,833.22',
+              plano: '/depas/Acqua.png',
+              precio: '7,310,279.95',
               codigoDepa: '701',
               nivel: '2-7',
               cajones: '2',
@@ -756,7 +756,7 @@ const Cotizador = () => {
           const [depa702, setDepa702] = useState(false);
 
           const depa702Info = {
-              titulo: 'DEPARTAMENTO 702',
+              titulo: 'DEPARTAMENTO ACQUA',
               arr: [
                 'Cocina', 
                 'Alacena / Bodega', 
@@ -777,8 +777,8 @@ const Cotizador = () => {
                 'Baño de servicio',
                 'Área de compresores',
               ],
-              plano: '/depas/702.png',
-              precio: '8,839,867.64',
+              plano: '/depas/Acqua.png',
+              precio: '7,310,279.95',
               codigoDepa: '702',
               nivel: '2-7',
               cajones: '2',
@@ -834,9 +834,9 @@ const Cotizador = () => {
                 'Circulación vertical',
                 'Área de compresores',
               ],
-              plano1: '/depas/PH01_PA.png',
-              plano2: '/depas/PH01_PB.png',
-              precio: '16,618,143.24',
+              plano1: '/depas/PA-PH.png',
+              plano2: '/depas/PB-PH.png',
+              precio: '10,629,600.00',
               codigoDepa: 'pha',
               nivel: '8-9',
               cajones: '2',
@@ -894,9 +894,9 @@ const Cotizador = () => {
                 'Bodega',
                 'Circulación vertical',
               ],
-              plano1: '/depas/PH02_PA.png',
-              plano2: '/depas/PH02_PB.png',
-              precio: '15,992,344.89',
+              plano1: '/depas/PA-PH.png',
+              plano2: '/depas/PB-PH.png',
+              precio: '10,629,600.00',
               codigoDepa: 'phb',
               nivel: '8-9',
               cajones: '2',
@@ -1157,7 +1157,7 @@ const CotizadorContainer = styled.section`
                 .depa01 {
                     width: 109px;
                     height: 44px;
-                    background-color: #808642;
+                    background-color: #9E4C3B;
                     right: 55px;
                     bottom: 13px;
                 }
@@ -1206,7 +1206,7 @@ const CotizadorContainer = styled.section`
                 .depa302 {
                     width: 109px;
                     height: 38px;
-                    background-color: #E29C25;
+                    background-color: #808642;
                     left: 50px;
                     bottom: 147px;
                 }
@@ -1234,7 +1234,7 @@ const CotizadorContainer = styled.section`
                 .depa502 {
                     width: 109px;
                     height: 38px;
-                    background-color: #E29C25;
+                    background-color: #9E4C3B;
                     left: 50px;
                     bottom: 234px;
                 }
@@ -1262,7 +1262,7 @@ const CotizadorContainer = styled.section`
                 .depa702 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
+                    background-color: #9E4C3B;
                     left: 50px;
                     bottom: 322px;
                 }
@@ -1283,14 +1283,14 @@ const CotizadorContainer = styled.section`
                 .depaPHB-1 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
+                    background-color: #9E4C3B;
                     left: 50px;
                     bottom: 366px;
                 }
                 .depaPHB-2 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
+                    background-color: #9E4C3B;
                     left: 50px;
                     bottom: 409px;
                 }

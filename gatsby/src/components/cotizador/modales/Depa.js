@@ -211,8 +211,8 @@ const Container = styled.section`
                     }
                     ul {
                         column-count: 2;
-                        list-style: decimal-leading-zero;
-                        margin-left: 20px;
+                        /* list-style: decimal-leading-zero;
+                        margin-left: 20px; */
                         @media (max-width: 680px) {
                             column-count: 1;
                         }
