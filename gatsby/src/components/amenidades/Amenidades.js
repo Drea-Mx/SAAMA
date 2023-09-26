@@ -13,7 +13,7 @@ const Amenidades = () => {
             
             <div className="mapa">
                 <StaticImage 
-                    src="amenidades.jpg" 
+                    src="amenidades02.jpeg" 
                     alt="SAAMA Departamentos" 
                     layout="fullWidth"
                     placeholder="blurred"
@@ -181,6 +181,7 @@ const UbicacionContainer = styled.section`
             margin-bottom: 550px;
         }
         .numeros {
+            display: none;
             position: absolute;
             top: 0;
             left: 0;
