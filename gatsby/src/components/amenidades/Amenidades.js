@@ -13,7 +13,7 @@ const Amenidades = () => {
             
             <div className="mapa">
                 <StaticImage 
-                    src="amenidades02.jpeg" 
+                    src="amenidades02.jpg" 
                     alt="SAAMA Departamentos" 
                     layout="fullWidth"
                     placeholder="blurred"
