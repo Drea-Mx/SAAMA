@@ -25,12 +25,19 @@ const PentHouse = ({depaInfo, depa01, setDepa01}) => {
                 <h2>{depaInfo.titulo}</h2>
                 <div className='sections'>
                     <div className='iz'>
+
                         <div className='image'>
                             {
                                 next ?
-                                <img src={image1} alt='plano' />
+                                <div>
+                                    <h2>Planta Alta</h2>
+                                    <img src={image1} alt='plano' />
+                                </div>
                                 :
-                                <img src={image2} alt='plano' />
+                                <div>
+                                    <h2>Planta Baja</h2>
+                                    <img src={image2} alt='plano' />
+                                </div>
                             }
                             <div className='flechas'>
                                 <button className='izquierda' onClick={() => setNext(!next)}>
