@@ -46,7 +46,7 @@ const Footer = () => {
                 <motion.a   
                     rel="noreferrer" 
                     target='_blank'  
-                    href='https://wa.me/9994580265/?text=Mensaje desde la página web: Me interesa obtener más información sobre SAAMA Telchac'
+                    href='https://wa.me/+529994580265/?text=Mensaje desde la página web: Me interesa obtener más información sobre SAAMA Telchac'
                     initial={{ y: "200px" }}
                     animate={{ y: "0" }}
                     transition={{ delay: 0, duration: 1, repeat: 0 }}

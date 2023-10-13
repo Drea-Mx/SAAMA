@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Clock from "./Clock";
 
 const App = () => {
-  let deadline = "December, 30, 2024";
+  let deadline = "September, 30, 2025";
 
   return (
     <Container className="App">
