@@ -1096,14 +1096,14 @@ const CotizadorContainer = styled.section`
                 .depa302 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
+                    background-color: #9E4C3B;
                     left: 50px;
                     bottom: 147px;
                 }
                 .depa401 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
+                    background-color: #9E4C3B;
                     right: 55px;
                     bottom: 191px;
                 }
@@ -1124,14 +1124,14 @@ const CotizadorContainer = styled.section`
                 .depa502 {
                     width: 109px;
                     height: 38px;
-                    background-color: #9E4C3B;
+                    background-color: #808642;
                     left: 50px;
                     bottom: 234px;
                 }
                 .depa601 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
+                    background-color: #9E4C3B;
                     right: 55px;
                     bottom: 280px;
                 }
@@ -1159,14 +1159,14 @@ const CotizadorContainer = styled.section`
                 .depaPHA-1 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
+                    background-color: #9E4C3B;
                     right: 55px;
                     bottom: 366px;
                 }
                 .depaPHA-2 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
+                    background-color: #9E4C3B;
                     right: 55px;
                     bottom: 409px;
                 }
