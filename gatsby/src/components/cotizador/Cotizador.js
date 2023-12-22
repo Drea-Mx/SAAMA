@@ -1047,7 +1047,7 @@ const CotizadorContainer = styled.section`
                 .depa01 {
                     width: 109px;
                     height: 44px;
-                    background-color: #9E4C3B;
+                    background-color: #808642;
                     right: 55px;
                     bottom: 13px;
                 }
