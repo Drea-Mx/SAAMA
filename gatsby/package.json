@@ -25,6 +25,7 @@
     "gatsby-plugin-styled-components": "^6.0.0",
     "gatsby-plugin-transition-link": "^1.20.5",
     "gatsby-source-filesystem": "^5.0.0",
+    "gatsby-source-sanity": "^7.9.1",
     "gatsby-transformer-sharp": "^5.0.0",
     "gsap": "^3.11.3",
     "html-react-parser": "^3.0.4",
