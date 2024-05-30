@@ -1,12 +1,25 @@
-import React, {useState} from "react";
+import React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
+import { Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
 const ContactoSuccess = () => {
 
+    const data = useStaticQuery(graphql`
+query {
+    sanityGlobalPage {
+        
+        brochure {
+        asset {
+            url
+        }
+        }
+    }
+}
+    `);
 
-    const [close, setClose] = useState(true);
 
 
     return(
@@ -67,23 +80,20 @@ const ContactoSuccess = () => {
             </div>
             <a className="aviso" href='/avisoDeProvacidad'>AVISO DE PRIVACIDAD</a>
         </UbicacionContainer>
-        {
-            close ? 
+        
                 <Success>
                     <div className='cont'>
-                        <button className='close' onClick={() => setClose(!close)}>X</button>
+                        <Link className='close' to='/contacto'>X</Link>
                         <h2>Formulario Enviado Correctamente</h2>
-                        <a target='_blank'  
+                        <a rel="noreferrer" target='_blank'  
                             download
-                            href='/BROCHURE_SAAMA_241122_ESP.pdf'
+                            href={data.sanityGlobalPage.brochure.asset.url}
                         >
                             Descargar Brochure</a>
 
                     </div>
                 </Success>
-                :
-                ''
-        }
+               
         </>
 
     )
@@ -92,7 +102,7 @@ const ContactoSuccess = () => {
 
 
 const Success = styled.div`
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     top: 0;
     left: 0;

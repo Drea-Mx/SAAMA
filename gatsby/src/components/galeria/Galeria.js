@@ -74,7 +74,7 @@ const Galeria = ({data}) => {
                     
                                 return (
                                     <div className="slide" key={imagen._key}>
-                                        <Link href="/galeria/001.webp" target='_blank'>
+                                        <Link href={imagen.asset.url} target='_blank'>
                                             <GatsbyImage
                                                 class="welcome"
                                                 style={{ height: "100%", width: "100%" }}

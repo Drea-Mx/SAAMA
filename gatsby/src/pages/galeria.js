@@ -21,6 +21,7 @@ export const data = graphql`
       images {
         _key
         asset {
+            url
           gatsbyImageData(
             layout: FULL_WIDTH
             outputPixelDensities: 1.5

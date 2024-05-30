@@ -1,19 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
 
-const Contacto = () => {
+
+
+const Contacto = ({data}) => {
+
+    const imageDataImage = getImage(data.sanityContactoPage.backgroundImage && data.sanityContactoPage.backgroundImage.asset)
+const imageGetDataImageAlt = data.sanityContactoPage.backgroundImage && data.sanityContactoPage.backgroundImage.alt
+
 
     return(
         <UbicacionContainer>
             <div className="fondo">
-                <StaticImage
-                    src="../../assets/images/contacto.jpg"
-                    alt="SAAMA"
-                    placeholder="blurred"
-                    layout="FULL_WIDTH"
+                <GatsbyImage
+                    class=""
                     style={{ height: "100%", width: "100%" }}
+                    image={imageDataImage}
+                    alt={imageGetDataImageAlt}
                 />
             </div>
             <motion.div  
@@ -48,16 +53,28 @@ const Contacto = () => {
                 <div className="de">
                     <div className="contacto1 contacto">
                         <h3>ATENCIÓN EMPORIUM</h3>
-                        <h3>+52 1 999 458 0265</h3>
-                        <a href="mailto:info@mbemporium.com">info@mbemporium.com</a>
+                        <h3>{data.sanityContactoPage.tel}</h3>
+                        <a href={`mailto:${data.sanityContactoPage.mail}`}>{data.sanityContactoPage.mail}</a>
                     </div>
                 </div>
             </motion.div>
                 
             <div className="logos">
-                <img src="/emporium.svg" alt='Emporium' />
-                <img src="/arkham.svg" alt='Arkham' />
-                <img src="/geyluk.svg" alt='geyluk' />
+
+
+                {data.sanityContactoPage.logos.images.map((logo) => {
+                        const imagenLogoGetDataImage = getImage(logo && logo.asset)
+                    
+                                return (
+                                    <div className="image">
+                                        <GatsbyImage
+                                            class=""
+                                            image={imagenLogoGetDataImage}
+                                            alt='logos'
+                                        />
+                                    </div>
+                                )
+                            })}
             </div>
             <a className="aviso" href='/avisoDeProvacidad'>AVISO DE PRIVACIDAD</a>
         </UbicacionContainer>
@@ -154,7 +171,7 @@ const UbicacionContainer = styled.section`
         margin: 50px auto 50px;
         display: flex;
         justify-content: center;
-        img {
+        .image {
             width: 150px;
             margin-right: 20px;
             margin-left: 20px;

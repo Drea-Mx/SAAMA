@@ -1,39 +1,82 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from "framer-motion"
+import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Footer = () => {
+
+    const data = useStaticQuery(graphql`
+query {
+    sanityGlobalPage {
+        socialMediaLinks {
+        name
+        url
+        icon {
+            asset {
+            gatsbyImageData(
+                layout: FULL_WIDTH
+                outputPixelDensities: 1.5
+                placeholder: BLURRED
+            )
+            }
+        }
+        }
+        brochure {
+        asset {
+            url
+        }
+        }
+        whats {
+        name
+        url
+        icon {
+            alt
+            asset {
+            gatsbyImageData(
+                layout: FULL_WIDTH
+                outputPixelDensities: 1.5
+                placeholder: BLURRED
+            )
+            }
+        }
+        }
+    }
+}
+    `);
+
+
     return(
         <FooterContainer>
             <div className="redes" >
-                <motion.a   
-                    className="red"
-                    rel="noreferrer" 
-                    target='_blank'  
-                    href='https://www.facebook.com/profile.php?id=100085116297594'
-                    initial={{ y: "200px" }}
-                    animate={{ y: "0" }}
-                    transition={{ delay: 0, duration: 1, repeat: 0 }}
-                >
-                    <img src='/face.svg' alt='Icono facebook' />
-                </motion.a >
-                <motion.a   
-                    className="red"
-                    rel="noreferrer" 
-                    target='_blank'  
-                    href='https://www.instagram.com/saamatelchac/'
-                    initial={{ y: "200px" }}
-                    animate={{ y: "0" }}
-                    transition={{ delay: 0, duration: 1, repeat: 0 }}
-                >
-                        <img src='/insta.svg' alt='Icono Instagram' />
-                </motion.a >
+                {data.sanityGlobalPage.socialMediaLinks.map((red) => {
+                    const redLogoGetDataImage = getImage(red.icon && red.icon.asset)
+                
+                            return (
+                                <motion.a   
+                                    className="red"
+                                    rel="noreferrer" 
+                                    target='_blank'  
+                                    href={red.url}
+                                    initial={{ y: "200px" }}
+                                    animate={{ y: "0" }}
+                                    transition={{ delay: 0, duration: 1, repeat: 0 }}
+                                >
+                                    <GatsbyImage
+                                            class=""
+                                            image={redLogoGetDataImage}
+                                            alt='social logo'
+                                        />
+                                </motion.a >
+                            )
+                })}
+                
                 <motion.a   
                     className="brochure"
                     rel="noreferrer" 
                     target='_blank'  
                     download
-                    href='/BROCHURESAAMA-2.pdf'
+                    href={data.sanityGlobalPage.brochure.asset.url}
                     initial={{ y: "200px" }}
                     animate={{ y: "0" }}
                     transition={{ delay: 0, duration: 1, repeat: 0 }}
@@ -46,7 +89,7 @@ const Footer = () => {
                 <motion.a   
                     rel="noreferrer" 
                     target='_blank'  
-                    href='https://wa.me/+529994580265/?text=Mensaje desde la página web: Me interesa obtener más información sobre SAAMA Telchac'
+                    href={data.sanityGlobalPage.whats.url}
                     initial={{ y: "200px" }}
                     animate={{ y: "0" }}
                     transition={{ delay: 0, duration: 1, repeat: 0 }}

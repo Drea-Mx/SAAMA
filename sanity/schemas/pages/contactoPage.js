@@ -11,6 +11,11 @@ export default {
             type: 'string',
         },
         {
+            name: 'backgroundImage',
+            title: 'Background image',
+            type: 'imageType'
+        },
+        {
             name: 'tel',
             title: 'Tel',
             type: 'string'
