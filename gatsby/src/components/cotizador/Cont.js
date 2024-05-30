@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Clock from "./Clock";
 
-const App = () => {
-  let deadline = "September, 30, 2025";
+const App = ({date}) => {
+  
+  let deadline = date;
 
   return (
     <Container className="App">

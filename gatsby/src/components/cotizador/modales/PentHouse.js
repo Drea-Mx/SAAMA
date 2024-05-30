@@ -97,7 +97,7 @@ const PentHouse = ({depaInfo, depa01, setDepa01}) => {
                     <div className='de'>
                         <div className='top'>
                             <h3>Precio de venta</h3>
-                            <h3>${depaInfo.precio}</h3>
+                            <h3>{depaInfo.precio}</h3>
                         </div>
                         <div className='bot'>
                             <p>Si te interesa este departamento envía un mensaje desde nuestro formulario y uno de nuestros asesores se pondrá en contacto contigo:</p>

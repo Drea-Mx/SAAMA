@@ -9,7 +9,6 @@ import PentHouse from './modales/PentHouse'
 
 const CotizadorSuccess = () => {
 
-    const [close, setClose] = useState(true);
 
 
     const [depa01, setDepa01] = useState(false);
@@ -1094,19 +1093,16 @@ const CotizadorSuccess = () => {
         <Arrow className='arrow' to='/contacto'>
             ↓
         </Arrow>
-        {
-            close ? 
+        
                 <Success>
                     <div className='cont'>
-                        <button className='close' onClick={() => setClose(!close)}>X</button>
+                        <Link className='close' to='/'>X</Link>
                         <h2>Formulario Enviado Correctamente</h2>
                         <Link to='/'>Volver al inicio</Link>
 
                     </div>
                 </Success>
-                :
-                ''
-        }
+               
 
         </>
 
@@ -1114,7 +1110,7 @@ const CotizadorSuccess = () => {
 }
 
 const Success = styled.div`
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     top: 0;
     left: 0;
@@ -1128,7 +1124,7 @@ const Success = styled.div`
         transform: translate(-50%, -50%);
         background-color: white;
         padding: 50px;
-        button {
+        a.close {
             position: absolute;
             top: 20px;
             right: 20px;

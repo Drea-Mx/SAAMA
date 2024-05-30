@@ -7,50 +7,31 @@ import App from './Cont'
 import { Link } from 'gatsby'
 import PentHouse from './modales/PentHouse'
 
-const Cotizador = () => {
+const Cotizador = ({data}) => {
 
     const [depa01, setDepa01] = useState(false);
 
 
     // Depa 001
     const depa1 = {
-        titulo: 'DEPARTAMENTO GARDEN',
-        arr: [
-            'Cocina', 
-            'Comedor', 
-            'Sala', 
-            'Terraza',
-            'Piscina',
-            'Baño de visitas',
-            'Recámara A',
-            'Closet A',
-            'Baño A',
-            'Recámara B',
-            'Clóset B',
-            'Baño B',
-            'Recámara C',
-            'Closet C',
-            'Baño C',
-            'Jardín interior',
-            'Terraza con jacuzzi',
-            'Cuarto de servicio',
-        ],
-        plano: '/depas/Garden.png',
-        precio: '8,364,000',
+        titulo: data.sanityFinanciamientoPage.depa001.title,
+        arr: data.sanityFinanciamientoPage.depa001.areas,
+        plano: data.sanityFinanciamientoPage.depa001.image.asset.url,
+        precio: data.sanityFinanciamientoPage.depa001.precio,
         codigoDepa: 'GH1',
-        nivel: 'Planta Baja',
+        nivel: data.sanityFinanciamientoPage.depa001.nivel,
         cajones: '2',
         espacios1: [
-            'Interior: 145.7 m²',
-            'Terraza 1: 33.2 m²',
-            'Piscina: 12.9 m²',
-            'Terraza 2: 24.5 m²',
-            'Jacuzzi: 5 m²',
-            'Bodega: 1.8 m²',
-            'Estacionamiento: 25 m²',
+            `Interior: ${data.sanityFinanciamientoPage.depa001.interior}`,
+            `Terraza 1: ${data.sanityFinanciamientoPage.depa001.terraza}`,
+            `Piscina: ${data.sanityFinanciamientoPage.depa001.piscina}`,
+            `Terraza 2: ${data.sanityFinanciamientoPage.depa001.terraza2}`,
+            `Jacuzzi: ${data.sanityFinanciamientoPage.depa001.jacuzzi}`,
+            `Bodega: ${data.sanityFinanciamientoPage.depa001.bodega}`,
+            `Estacionamiento: ${data.sanityFinanciamientoPage.depa001.estacionamiento}`,
         ],
         espacios2: [
-            'M2 Habitables: 204 m²',
+            `M2 Habitables: ${data.sanityFinanciamientoPage.depa001.m2Habitables}`,
         ],
     }
 
@@ -59,43 +40,24 @@ const Cotizador = () => {
     const [depa02, setDepa02] = useState(false);
 
     const depa2 = {
-        titulo: 'DEPARTAMENTO GARDEN',
-        arr: [
-            'Cocina', 
-            'Comedor', 
-            'Sala', 
-            'Terraza',
-            'Piscina',
-            'Baño de visitas',
-            'Recámara A',
-            'Closet A',
-            'Baño A',
-            'Recámara B',
-            'Clóset B',
-            'Baño B',
-            'Recámara C',
-            'Closet C',
-            'Baño C',
-            'Jardín interior',
-            'Terraza con jacuzzi',
-            'Cuarto de servicio',
-        ],
-        plano: '/depas/Garden.png',
-        precio: '8,364,000',
+        titulo: data.sanityFinanciamientoPage.depa002.title,
+        arr: data.sanityFinanciamientoPage.depa002.areas,
+        plano: data.sanityFinanciamientoPage.depa002.image.asset.url,
+        precio: data.sanityFinanciamientoPage.depa002.precio,
         codigoDepa: 'GH2',
-        nivel: 'Planta Baja',
+        nivel: data.sanityFinanciamientoPage.depa002.nivel,
         cajones: '2',
         espacios1: [
-            'Interior: 145.7 m²',
-            'Terraza 1: 33.2 m²',
-            'Piscina: 12.9 m²',
-            'Terraza 2: 24.5 m²',
-            'Jacuzzi: 5 m²',
-            'Bodega: 1.8 m²',
-            'Estacionamiento: 25 m²',
+            `Interior: ${data.sanityFinanciamientoPage.depa002.interior}`,
+            `Terraza 1: ${data.sanityFinanciamientoPage.depa002.terraza}`,
+            `Piscina: ${data.sanityFinanciamientoPage.depa002.piscina}`,
+            `Terraza 2: ${data.sanityFinanciamientoPage.depa002.terraza2}`,
+            `Jacuzzi: ${data.sanityFinanciamientoPage.depa002.jacuzzi}`,
+            `Bodega: ${data.sanityFinanciamientoPage.depa002.bodega}`,
+            `Estacionamiento: ${data.sanityFinanciamientoPage.depa002.estacionamiento}`,
         ],
         espacios2: [
-            'M2 Habitables: 204 m²',
+            `M2 Habitables: ${data.sanityFinanciamientoPage.depa002.m2Habitables}`,
         ],
     }
 
@@ -106,42 +68,25 @@ const Cotizador = () => {
     const [depa101, setDepa101] = useState(false);
 
     const depa101Info = {
-        titulo: 'DEPARTAMENTO PALMA',
-        arr: [
-            'Cocina', 
-            'Comedor', 
-            'Sala', 
-            'Terraza',
-            'Piscina',
-            'Recamara A',
-            'Clóset vestidor A',
-            'Baño A',
-            'Recámara B',
-            'Closet B',
-            'Baño B',
-            'Recamara C',
-            'Closet C',
-            'Baño Completo',
-            'Terraza 2',
-            'Cuarto de servicio',
-        ],
-        plano: '/depas/Palma.png',
-        precio: '7,991,507.00',
-        codigoDepa: '101',
-        nivel: '1',
-        cajones: '2',
+        titulo: data.sanityFinanciamientoPage.depa101.title,
+        arr: data.sanityFinanciamientoPage.depa101.areas,
+        plano: data.sanityFinanciamientoPage.depa101.image.asset.url,
+        precio: data.sanityFinanciamientoPage.depa101.precio,
+        nivel: data.sanityFinanciamientoPage.depa101.nivel,
         espacios1: [
-            'Interior: 120.85 m²',
-            'Terraza 1: 50 m²',
-            'Piscina: 15.2 m²',
-            'Terraza 2: 13.95 m²',
-            'Jacuzzi: N/A',
-            'Bodega: 1.8 m²',
-            'Estacionamiento: 25 m²',
+            `Interior: ${data.sanityFinanciamientoPage.depa101.interior}`,
+            `Terraza 1: ${data.sanityFinanciamientoPage.depa101.terraza}`,
+            `Piscina: ${data.sanityFinanciamientoPage.depa101.piscina}`,
+            `Terraza 2: ${data.sanityFinanciamientoPage.depa101.terraza2}`,
+            `Jacuzzi: ${data.sanityFinanciamientoPage.depa101.jacuzzi}`,
+            `Bodega: ${data.sanityFinanciamientoPage.depa101.bodega}`,
+            `Estacionamiento: ${data.sanityFinanciamientoPage.depa101.estacionamiento}`,
         ],
         espacios2: [
-            'M2 Habitables: 185 m²',
+            `M2 Habitables: ${data.sanityFinanciamientoPage.depa101.m2Habitables}`,
         ],
+        codigoDepa: '101',
+        cajones: '2',
     }
 
 
@@ -150,42 +95,27 @@ const Cotizador = () => {
     const [depa102, setDepa102] = useState(false);
 
     const depa102Info = {
-        titulo: 'DEPARTAMENTO PALMA',
-        arr: [
-            'Cocina', 
-            'Comedor', 
-            'Sala', 
-            'Terraza',
-            'Piscina',
-            'Recamara A',
-            'Clóset vestidor A',
-            'Baño A',
-            'Recámara B',
-            'Closet B',
-            'Baño B',
-            'Recamara C',
-            'Closet C',
-            'Baño Completo',
-            'Terraza 2',
-            'Cuarto de servicio',
-        ],
-        plano: '/depas/Palma.png',
-        precio: '7,991,507.00',
-        codigoDepa: '102',
-        nivel: '1',
-        cajones: '2',
+        titulo: data.sanityFinanciamientoPage.depa102.title,
+        arr: data.sanityFinanciamientoPage.depa102.areas,
+        plano: data.sanityFinanciamientoPage.depa102.image.asset.url,
+        precio: data.sanityFinanciamientoPage.depa102.precio,
+        nivel: data.sanityFinanciamientoPage.depa102.nivel,
         espacios1: [
-            'Interior: 120.85 m²',
-            'Terraza 1: 50 m²',
-            'Piscina: 15.2 m²',
-            'Terraza 2: 13.95 m²',
-            'Jacuzzi: N/A',
-            'Bodega: 1.8 m²',
-            'Estacionamiento: 25 m²',
+            `Interior: ${data.sanityFinanciamientoPage.depa102.interior}`,
+            `Terraza 1: ${data.sanityFinanciamientoPage.depa102.terraza}`,
+            `Piscina: ${data.sanityFinanciamientoPage.depa102.piscina}`,
+            `Terraza 2: ${data.sanityFinanciamientoPage.depa102.terraza2}`,
+            `Jacuzzi: ${data.sanityFinanciamientoPage.depa102.jacuzzi}`,
+            `Bodega: ${data.sanityFinanciamientoPage.depa102.bodega}`,
+            `Estacionamiento: ${data.sanityFinanciamientoPage.depa102.estacionamiento}`,
         ],
         espacios2: [
-            'M2 Habitables: 185 m²',
+            `M2 Habitables: ${data.sanityFinanciamientoPage.depa102.m2Habitables}`,
         ],
+
+        codigoDepa: '102',
+        cajones: '2',
+        
     }
 
         // Depa 201
@@ -193,39 +123,26 @@ const Cotizador = () => {
     const [depa201, setDepa201] = useState(false);
 
     const depa201Info = {
-        titulo: 'DEPARTAMENTO ACQUA',
-        arr: [
-            'Cocina', 
-            'Comedor', 
-            'Sala', 
-            'Recámara A',
-            'Closet vestidor A',
-            'Baño A',
-            'Recámara B',
-            'Closet B',
-            'Baño B',
-            'Recámara C',
-            'Closet C',
-            'Baño Completo',
-            'Cuarto de servicio',
-        ],
-        plano: '/depas/Acqua.png',
-        precio: '7,310,279.95',
-        codigoDepa: '201',
-        nivel: '2-7',
-        cajones: '2',
+        titulo: data.sanityFinanciamientoPage.depa201.title,
+        arr: data.sanityFinanciamientoPage.depa201.areas,
+        plano: data.sanityFinanciamientoPage.depa201.image.asset.url,
+        precio: data.sanityFinanciamientoPage.depa201.precio,
+        nivel: data.sanityFinanciamientoPage.depa201.nivel,
         espacios1: [
-            'Interior: 120.9 m²',
-            'Terraza 1: 18.95 m²',
-            'Piscina: N/A',
-            'Terraza 2: N/A',
-            'Jacuzzi: N/A',
-            'Bodega: 1.8 m²',
-            'Estacionamiento: 25 m²',
+            `Interior: ${data.sanityFinanciamientoPage.depa201.interior}`,
+            `Terraza 1: ${data.sanityFinanciamientoPage.depa201.terraza}`,
+            `Piscina: ${data.sanityFinanciamientoPage.depa201.piscina}`,
+            `Terraza 2: ${data.sanityFinanciamientoPage.depa201.terraza2}`,
+            `Jacuzzi: ${data.sanityFinanciamientoPage.depa201.jacuzzi}`,
+            `Bodega: ${data.sanityFinanciamientoPage.depa201.bodega}`,
+            `Estacionamiento: ${data.sanityFinanciamientoPage.depa201.estacionamiento}`,
         ],
         espacios2: [
-            'M2 Habitables: 140 m²',
+            `M2 Habitables: ${data.sanityFinanciamientoPage.depa201.m2Habitables}`,
         ],
+
+        codigoDepa: '201',
+        cajones: '2',
     }
 
 
@@ -234,39 +151,26 @@ const Cotizador = () => {
     const [depa202, setDepa202] = useState(false);
 
     const depa202Info = {
-        titulo: 'DEPARTAMENTO ACQUA',
-        arr: [
-            'Cocina', 
-            'Comedor', 
-            'Sala', 
-            'Recámara A',
-            'Closet vestidor A',
-            'Baño A',
-            'Recámara B',
-            'Closet B',
-            'Baño B',
-            'Recámara C',
-            'Closet C',
-            'Baño Completo',
-            'Cuarto de servicio',
-        ],
-        plano: '/depas/Acqua.png',
-        precio: '7,310,279.95',
-        codigoDepa: '202',
-        nivel: '2-7',
-        cajones: '2',
+        titulo: data.sanityFinanciamientoPage.depa202.title,
+        arr: data.sanityFinanciamientoPage.depa202.areas,
+        plano: data.sanityFinanciamientoPage.depa202.image.asset.url,
+        precio: data.sanityFinanciamientoPage.depa202.precio,
+        nivel: data.sanityFinanciamientoPage.depa202.nivel,
         espacios1: [
-            'Interior: 120.9 m²',
-            'Terraza 1: 18.95 m²',
-            'Piscina: N/A',
-            'Terraza 2: N/A',
-            'Jacuzzi: N/A',
-            'Bodega: 1.8 m²',
-            'Estacionamiento: 25 m²',
+            `Interior: ${data.sanityFinanciamientoPage.depa202.interior}`,
+            `Terraza 1: ${data.sanityFinanciamientoPage.depa202.terraza}`,
+            `Piscina: ${data.sanityFinanciamientoPage.depa202.piscina}`,
+            `Terraza 2: ${data.sanityFinanciamientoPage.depa202.terraza2}`,
+            `Jacuzzi: ${data.sanityFinanciamientoPage.depa202.jacuzzi}`,
+            `Bodega: ${data.sanityFinanciamientoPage.depa202.bodega}`,
+            `Estacionamiento: ${data.sanityFinanciamientoPage.depa202.estacionamiento}`,
         ],
         espacios2: [
-            'M2 Habitables: 140 m²',
+            `M2 Habitables: ${data.sanityFinanciamientoPage.depa202.m2Habitables}`,
         ],
+
+        codigoDepa: '202',
+        cajones: '2',
     }
 
 
@@ -276,39 +180,26 @@ const Cotizador = () => {
           const [depa301, setDepa301] = useState(false);
 
           const depa301Info = {
-              titulo: 'DEPARTAMENTO ACQUA',
-              arr: [
-                'Cocina', 
-                'Comedor', 
-                'Sala', 
-                'Recámara A',
-                'Closet vestidor A',
-                'Baño A',
-                'Recámara B',
-                'Closet B',
-                'Baño B',
-                'Recámara C',
-                'Closet C',
-                'Baño Completo',
-                'Cuarto de servicio',
-            ],
-              plano: '/depas/Acqua.png',
-              precio: '7,335,279.95',
-              codigoDepa: '301',
-              nivel: '2-7',
-              cajones: '2',
-              espacios1: [
-                'Interior: 120.9 m²',
-                'Terraza 1: 18.95 m²',
-                'Piscina: N/A',
-                'Terraza 2: N/A',
-                'Jacuzzi: N/A',
-                'Bodega: 1.8 m²',
-                'Estacionamiento: 25 m²',
+            titulo: data.sanityFinanciamientoPage.depa301.title,
+            arr: data.sanityFinanciamientoPage.depa301.areas,
+            plano: data.sanityFinanciamientoPage.depa301.image.asset.url,
+            precio: data.sanityFinanciamientoPage.depa301.precio,
+            nivel: data.sanityFinanciamientoPage.depa301.nivel,
+            espacios1: [
+                `Interior: ${data.sanityFinanciamientoPage.depa301.interior}`,
+                `Terraza 1: ${data.sanityFinanciamientoPage.depa301.terraza}`,
+                `Piscina: ${data.sanityFinanciamientoPage.depa301.piscina}`,
+                `Terraza 2: ${data.sanityFinanciamientoPage.depa301.terraza2}`,
+                `Jacuzzi: ${data.sanityFinanciamientoPage.depa301.jacuzzi}`,
+                `Bodega: ${data.sanityFinanciamientoPage.depa301.bodega}`,
+                `Estacionamiento: ${data.sanityFinanciamientoPage.depa301.estacionamiento}`,
             ],
             espacios2: [
-                'M2 Habitables: 140 m²',
+                `M2 Habitables: ${data.sanityFinanciamientoPage.depa301.m2Habitables}`,
             ],
+    
+            codigoDepa: '301',
+            cajones: '2',
           }
 
           
@@ -320,39 +211,26 @@ const Cotizador = () => {
           const [depa302, setDepa302] = useState(false);
 
           const depa302Info = {
-              titulo: 'DEPARTAMENTO ACQUA',
-              arr: [
-                'Cocina', 
-                'Comedor', 
-                'Sala', 
-                'Recámara A',
-                'Closet vestidor A',
-                'Baño A',
-                'Recámara B',
-                'Closet B',
-                'Baño B',
-                'Recámara C',
-                'Closet C',
-                'Baño Completo',
-                'Cuarto de servicio',
-            ],
-              plano: '/depas/Acqua.png',
-              precio: '7,335,279.95',
-              codigoDepa: '302',
-              nivel: '2-7',
-              cajones: '2',
-              espacios1: [
-                'Interior: 120.9 m²',
-                'Terraza 1: 18.95 m²',
-                'Piscina: N/A',
-                'Terraza 2: N/A',
-                'Jacuzzi: N/A',
-                'Bodega: 1.8 m²',
-                'Estacionamiento: 25 m²',
+            titulo: data.sanityFinanciamientoPage.depa302.title,
+            arr: data.sanityFinanciamientoPage.depa302.areas,
+            plano: data.sanityFinanciamientoPage.depa302.image.asset.url,
+            precio: data.sanityFinanciamientoPage.depa302.precio,
+            nivel: data.sanityFinanciamientoPage.depa302.nivel,
+            espacios1: [
+                `Interior: ${data.sanityFinanciamientoPage.depa302.interior}`,
+                `Terraza 1: ${data.sanityFinanciamientoPage.depa302.terraza}`,
+                `Piscina: ${data.sanityFinanciamientoPage.depa302.piscina}`,
+                `Terraza 2: ${data.sanityFinanciamientoPage.depa302.terraza2}`,
+                `Jacuzzi: ${data.sanityFinanciamientoPage.depa302.jacuzzi}`,
+                `Bodega: ${data.sanityFinanciamientoPage.depa302.bodega}`,
+                `Estacionamiento: ${data.sanityFinanciamientoPage.depa302.estacionamiento}`,
             ],
             espacios2: [
-                'M2 Habitables: 140 m²',
+                `M2 Habitables: ${data.sanityFinanciamientoPage.depa302.m2Habitables}`,
             ],
+    
+            codigoDepa: '302',
+            cajones: '2',
           }
           
 
@@ -363,39 +241,26 @@ const Cotizador = () => {
           const [depa401, setDepa401] = useState(false);
 
           const depa401Info = {
-              titulo: 'DEPARTAMENTO ACQUA',
-              arr: [
-                'Cocina', 
-                'Comedor', 
-                'Sala', 
-                'Recámara A',
-                'Closet vestidor A',
-                'Baño A',
-                'Recámara B',
-                'Closet B',
-                'Baño B',
-                'Recámara C',
-                'Closet C',
-                'Baño Completo',
-                'Cuarto de servicio',
-            ],
-              plano: '/depas/Acqua.png',
-              precio: '7,360,279.95',
-              codigoDepa: '401',
-              nivel: '2-7',
-              cajones: '2',
-              espacios1: [
-                'Interior: 120.9 m²',
-                'Terraza 1: 18.95 m²',
-                'Piscina: N/A',
-                'Terraza 2: N/A',
-                'Jacuzzi: N/A',
-                'Bodega: 1.8 m²',
-                'Estacionamiento: 25 m²',
+            titulo: data.sanityFinanciamientoPage.depa401.title,
+            arr: data.sanityFinanciamientoPage.depa401.areas,
+            plano: data.sanityFinanciamientoPage.depa401.image.asset.url,
+            precio: data.sanityFinanciamientoPage.depa401.precio,
+            nivel: data.sanityFinanciamientoPage.depa401.nivel,
+            espacios1: [
+                `Interior: ${data.sanityFinanciamientoPage.depa401.interior}`,
+                `Terraza 1: ${data.sanityFinanciamientoPage.depa401.terraza}`,
+                `Piscina: ${data.sanityFinanciamientoPage.depa401.piscina}`,
+                `Terraza 2: ${data.sanityFinanciamientoPage.depa401.terraza2}`,
+                `Jacuzzi: ${data.sanityFinanciamientoPage.depa401.jacuzzi}`,
+                `Bodega: ${data.sanityFinanciamientoPage.depa401.bodega}`,
+                `Estacionamiento: ${data.sanityFinanciamientoPage.depa401.estacionamiento}`,
             ],
             espacios2: [
-                'M2 Habitables: 140 m²',
+                `M2 Habitables: ${data.sanityFinanciamientoPage.depa401.m2Habitables}`,
             ],
+    
+            codigoDepa: '401',
+            cajones: '2',
           }
           
 
@@ -406,39 +271,26 @@ const Cotizador = () => {
           const [depa402, setDepa402] = useState(false);
 
           const depa402Info = {
-              titulo: 'DEPARTAMENTO ACQUA',
-              arr: [
-                'Cocina', 
-                'Comedor', 
-                'Sala', 
-                'Recámara A',
-                'Closet vestidor A',
-                'Baño A',
-                'Recámara B',
-                'Closet B',
-                'Baño B',
-                'Recámara C',
-                'Closet C',
-                'Baño Completo',
-                'Cuarto de servicio',
-            ],
-              plano: '/depas/Acqua.png',
-              precio: '7,360,279.95',
-              codigoDepa: '402',
-              nivel: '2-7',
-              cajones: '2',
-              espacios1: [
-                'Interior: 120.9 m²',
-                'Terraza 1: 18.95 m²',
-                'Piscina: N/A',
-                'Terraza 2: N/A',
-                'Jacuzzi: N/A',
-                'Bodega: 1.8 m²',
-                'Estacionamiento: 25 m²',
+            titulo: data.sanityFinanciamientoPage.depa402.title,
+            arr: data.sanityFinanciamientoPage.depa402.areas,
+            plano: data.sanityFinanciamientoPage.depa402.image.asset.url,
+            precio: data.sanityFinanciamientoPage.depa402.precio,
+            nivel: data.sanityFinanciamientoPage.depa402.nivel,
+            espacios1: [
+                `Interior: ${data.sanityFinanciamientoPage.depa402.interior}`,
+                `Terraza 1: ${data.sanityFinanciamientoPage.depa402.terraza}`,
+                `Piscina: ${data.sanityFinanciamientoPage.depa402.piscina}`,
+                `Terraza 2: ${data.sanityFinanciamientoPage.depa402.terraza2}`,
+                `Jacuzzi: ${data.sanityFinanciamientoPage.depa402.jacuzzi}`,
+                `Bodega: ${data.sanityFinanciamientoPage.depa402.bodega}`,
+                `Estacionamiento: ${data.sanityFinanciamientoPage.depa402.estacionamiento}`,
             ],
             espacios2: [
-                'M2 Habitables: 140 m²',
+                `M2 Habitables: ${data.sanityFinanciamientoPage.depa402.m2Habitables}`,
             ],
+    
+            codigoDepa: '402',
+            cajones: '2',
           }
           
 
@@ -449,39 +301,26 @@ const Cotizador = () => {
           const [depa501, setDepa501] = useState(false);
 
           const depa501Info = {
-              titulo: 'DEPARTAMENTO ACQUA',
-              arr: [
-                'Cocina', 
-                'Comedor', 
-                'Sala', 
-                'Recámara A',
-                'Closet vestidor A',
-                'Baño A',
-                'Recámara B',
-                'Closet B',
-                'Baño B',
-                'Recámara C',
-                'Closet C',
-                'Baño Completo',
-                'Cuarto de servicio',
-            ],
-              plano: '/depas/Acqua.png',
-              precio: '7,385,279.95',
-              codigoDepa: '501',
-              nivel: '2-7',
-              cajones: '2',
-              espacios1: [
-                'Interior: 120.9 m²',
-                'Terraza 1: 18.95 m²',
-                'Piscina: N/A',
-                'Terraza 2: N/A',
-                'Jacuzzi: N/A',
-                'Bodega: 1.8 m²',
-                'Estacionamiento: 25 m²',
+            titulo: data.sanityFinanciamientoPage.depa501.title,
+            arr: data.sanityFinanciamientoPage.depa501.areas,
+            plano: data.sanityFinanciamientoPage.depa501.image.asset.url,
+            precio: data.sanityFinanciamientoPage.depa501.precio,
+            nivel: data.sanityFinanciamientoPage.depa501.nivel,
+            espacios1: [
+                `Interior: ${data.sanityFinanciamientoPage.depa501.interior}`,
+                `Terraza 1: ${data.sanityFinanciamientoPage.depa501.terraza}`,
+                `Piscina: ${data.sanityFinanciamientoPage.depa501.piscina}`,
+                `Terraza 2: ${data.sanityFinanciamientoPage.depa501.terraza2}`,
+                `Jacuzzi: ${data.sanityFinanciamientoPage.depa501.jacuzzi}`,
+                `Bodega: ${data.sanityFinanciamientoPage.depa501.bodega}`,
+                `Estacionamiento: ${data.sanityFinanciamientoPage.depa501.estacionamiento}`,
             ],
             espacios2: [
-                'M2 Habitables: 140 m²',
+                `M2 Habitables: ${data.sanityFinanciamientoPage.depa501.m2Habitables}`,
             ],
+    
+            codigoDepa: '501',
+            cajones: '2',
           }
 
 
@@ -491,39 +330,26 @@ const Cotizador = () => {
           const [depa502, setDepa502] = useState(false);
 
           const depa502Info = {
-              titulo: 'DEPARTAMENTO ACQUA',
-              arr: [
-                'Cocina', 
-                'Comedor', 
-                'Sala', 
-                'Recámara A',
-                'Closet vestidor A',
-                'Baño A',
-                'Recámara B',
-                'Closet B',
-                'Baño B',
-                'Recámara C',
-                'Closet C',
-                'Baño Completo',
-                'Cuarto de servicio',
-            ],
-              plano: '/depas/Acqua.png',
-              precio: '7,385,279.95',
-              codigoDepa: '502',
-              nivel: '2-7',
-              cajones: '2',
-              espacios1: [
-                'Interior: 120.9 m²',
-                'Terraza 1: 18.95 m²',
-                'Piscina: N/A',
-                'Terraza 2: N/A',
-                'Jacuzzi: N/A',
-                'Bodega: 1.8 m²',
-                'Estacionamiento: 25 m²',
+            titulo: data.sanityFinanciamientoPage.depa502.title,
+            arr: data.sanityFinanciamientoPage.depa502.areas,
+            plano: data.sanityFinanciamientoPage.depa502.image.asset.url,
+            precio: data.sanityFinanciamientoPage.depa502.precio,
+            nivel: data.sanityFinanciamientoPage.depa502.nivel,
+            espacios1: [
+                `Interior: ${data.sanityFinanciamientoPage.depa502.interior}`,
+                `Terraza 1: ${data.sanityFinanciamientoPage.depa502.terraza}`,
+                `Piscina: ${data.sanityFinanciamientoPage.depa502.piscina}`,
+                `Terraza 2: ${data.sanityFinanciamientoPage.depa502.terraza2}`,
+                `Jacuzzi: ${data.sanityFinanciamientoPage.depa502.jacuzzi}`,
+                `Bodega: ${data.sanityFinanciamientoPage.depa502.bodega}`,
+                `Estacionamiento: ${data.sanityFinanciamientoPage.depa502.estacionamiento}`,
             ],
             espacios2: [
-                'M2 Habitables: 140 m²',
+                `M2 Habitables: ${data.sanityFinanciamientoPage.depa502.m2Habitables}`,
             ],
+    
+            codigoDepa: '502',
+            cajones: '2',
           }
 
 
@@ -533,39 +359,26 @@ const Cotizador = () => {
           const [depa601, setDepa601] = useState(false);
 
           const depa601Info = {
-              titulo: 'DEPARTAMENTO ACQUA',
-              arr: [
-                'Cocina', 
-                'Comedor', 
-                'Sala', 
-                'Recámara A',
-                'Closet vestidor A',
-                'Baño A',
-                'Recámara B',
-                'Closet B',
-                'Baño B',
-                'Recámara C',
-                'Closet C',
-                'Baño Completo',
-                'Cuarto de servicio',
-            ],
-              plano: '/depas/Acqua.png',
-              precio: '7,410,279.95',
-              codigoDepa: '601',
-              nivel: '2-7',
-              cajones: '2',
-              espacios1: [
-                'Interior: 120.9 m²',
-                'Terraza 1: 18.95 m²',
-                'Piscina: N/A',
-                'Terraza 2: N/A',
-                'Jacuzzi: N/A',
-                'Bodega: 1.8 m²',
-                'Estacionamiento: 25 m²',
+            titulo: data.sanityFinanciamientoPage.depa601.title,
+            arr: data.sanityFinanciamientoPage.depa601.areas,
+            plano: data.sanityFinanciamientoPage.depa601.image.asset.url,
+            precio: data.sanityFinanciamientoPage.depa601.precio,
+            nivel: data.sanityFinanciamientoPage.depa601.nivel,
+            espacios1: [
+                `Interior: ${data.sanityFinanciamientoPage.depa601.interior}`,
+                `Terraza 1: ${data.sanityFinanciamientoPage.depa601.terraza}`,
+                `Piscina: ${data.sanityFinanciamientoPage.depa601.piscina}`,
+                `Terraza 2: ${data.sanityFinanciamientoPage.depa601.terraza2}`,
+                `Jacuzzi: ${data.sanityFinanciamientoPage.depa601.jacuzzi}`,
+                `Bodega: ${data.sanityFinanciamientoPage.depa601.bodega}`,
+                `Estacionamiento: ${data.sanityFinanciamientoPage.depa601.estacionamiento}`,
             ],
             espacios2: [
-                'M2 Habitables: 140 m²',
+                `M2 Habitables: ${data.sanityFinanciamientoPage.depa601.m2Habitables}`,
             ],
+    
+            codigoDepa: '601',
+            cajones: '2',
           }
 
 
@@ -575,39 +388,26 @@ const Cotizador = () => {
           const [depa602, setDepa602] = useState(false);
 
           const depa602Info = {
-              titulo: 'DEPARTAMENTO ACQUA',
-              arr: [
-                'Cocina', 
-                'Comedor', 
-                'Sala', 
-                'Recámara A',
-                'Closet vestidor A',
-                'Baño A',
-                'Recámara B',
-                'Closet B',
-                'Baño B',
-                'Recámara C',
-                'Closet C',
-                'Baño Completo',
-                'Cuarto de servicio',
-            ],
-              plano: '/depas/Acqua.png',
-              precio: '7,410,279.95',
-              codigoDepa: '602',
-              nivel: '2-7',
-              cajones: '2',
-              espacios1: [
-                'Interior: 120.9 m²',
-                'Terraza 1: 18.95 m²',
-                'Piscina: N/A',
-                'Terraza 2: N/A',
-                'Jacuzzi: N/A',
-                'Bodega: 1.8 m²',
-                'Estacionamiento: 25 m²',
+            titulo: data.sanityFinanciamientoPage.depa602.title,
+            arr: data.sanityFinanciamientoPage.depa602.areas,
+            plano: data.sanityFinanciamientoPage.depa602.image.asset.url,
+            precio: data.sanityFinanciamientoPage.depa602.precio,
+            nivel: data.sanityFinanciamientoPage.depa602.nivel,
+            espacios1: [
+                `Interior: ${data.sanityFinanciamientoPage.depa602.interior}`,
+                `Terraza 1: ${data.sanityFinanciamientoPage.depa602.terraza}`,
+                `Piscina: ${data.sanityFinanciamientoPage.depa602.piscina}`,
+                `Terraza 2: ${data.sanityFinanciamientoPage.depa602.terraza2}`,
+                `Jacuzzi: ${data.sanityFinanciamientoPage.depa602.jacuzzi}`,
+                `Bodega: ${data.sanityFinanciamientoPage.depa602.bodega}`,
+                `Estacionamiento: ${data.sanityFinanciamientoPage.depa602.estacionamiento}`,
             ],
             espacios2: [
-                'M2 Habitables: 140 m²',
+                `M2 Habitables: ${data.sanityFinanciamientoPage.depa602.m2Habitables}`,
             ],
+    
+            codigoDepa: '602',
+            cajones: '2',
           }
 
 
@@ -617,39 +417,26 @@ const Cotizador = () => {
           const [depa701, setDepa701] = useState(false);
 
           const depa701Info = {
-              titulo: 'DEPARTAMENTO ACQUA',
-              arr: [
-                'Cocina', 
-                'Comedor', 
-                'Sala', 
-                'Recámara A',
-                'Closet vestidor A',
-                'Baño A',
-                'Recámara B',
-                'Closet B',
-                'Baño B',
-                'Recámara C',
-                'Closet C',
-                'Baño Completo',
-                'Cuarto de servicio',
-            ],
-              plano: '/depas/Acqua.png',
-              precio: '7,435,279.95',
-              codigoDepa: '701',
-              nivel: '2-7',
-              cajones: '2',
-              espacios1: [
-                'Interior: 120.9 m²',
-                'Terraza 1: 18.95 m²',
-                'Piscina: N/A',
-                'Terraza 2: N/A',
-                'Jacuzzi: N/A',
-                'Bodega: 1.8 m²',
-                'Estacionamiento: 25 m²',
+            titulo: data.sanityFinanciamientoPage.depa701.title,
+            arr: data.sanityFinanciamientoPage.depa701.areas,
+            plano: data.sanityFinanciamientoPage.depa701.image.asset.url,
+            precio: data.sanityFinanciamientoPage.depa701.precio,
+            nivel: data.sanityFinanciamientoPage.depa701.nivel,
+            espacios1: [
+                `Interior: ${data.sanityFinanciamientoPage.depa701.interior}`,
+                `Terraza 1: ${data.sanityFinanciamientoPage.depa701.terraza}`,
+                `Piscina: ${data.sanityFinanciamientoPage.depa701.piscina}`,
+                `Terraza 2: ${data.sanityFinanciamientoPage.depa701.terraza2}`,
+                `Jacuzzi: ${data.sanityFinanciamientoPage.depa701.jacuzzi}`,
+                `Bodega: ${data.sanityFinanciamientoPage.depa701.bodega}`,
+                `Estacionamiento: ${data.sanityFinanciamientoPage.depa701.estacionamiento}`,
             ],
             espacios2: [
-                'M2 Habitables: 140 m²',
+                `M2 Habitables: ${data.sanityFinanciamientoPage.depa701.m2Habitables}`,
             ],
+    
+            codigoDepa: '701',
+            cajones: '2',
           }
 
 
@@ -659,39 +446,26 @@ const Cotizador = () => {
           const [depa702, setDepa702] = useState(false);
 
           const depa702Info = {
-              titulo: 'DEPARTAMENTO ACQUA',
-              arr: [
-                'Cocina', 
-                'Comedor', 
-                'Sala', 
-                'Recámara A',
-                'Closet vestidor A',
-                'Baño A',
-                'Recámara B',
-                'Closet B',
-                'Baño B',
-                'Recámara C',
-                'Closet C',
-                'Baño Completo',
-                'Cuarto de servicio',
-            ],
-              plano: '/depas/Acqua.png',
-              precio: '7,435,279.95',
-              codigoDepa: '702',
-              nivel: '2-7',
-              cajones: '2',
-              espacios1: [
-                'Interior: 120.9 m²',
-                'Terraza 1: 18.95 m²',
-                'Piscina: N/A',
-                'Terraza 2: N/A',
-                'Jacuzzi: N/A',
-                'Bodega: 1.8 m²',
-                'Estacionamiento: 25 m²',
+            titulo: data.sanityFinanciamientoPage.depa702.title,
+            arr: data.sanityFinanciamientoPage.depa702.areas,
+            plano: data.sanityFinanciamientoPage.depa702.image.asset.url,
+            precio: data.sanityFinanciamientoPage.depa702.precio,
+            nivel: data.sanityFinanciamientoPage.depa702.nivel,
+            espacios1: [
+                `Interior: ${data.sanityFinanciamientoPage.depa702.interior}`,
+                `Terraza 1: ${data.sanityFinanciamientoPage.depa702.terraza}`,
+                `Piscina: ${data.sanityFinanciamientoPage.depa702.piscina}`,
+                `Terraza 2: ${data.sanityFinanciamientoPage.depa702.terraza2}`,
+                `Jacuzzi: ${data.sanityFinanciamientoPage.depa702.jacuzzi}`,
+                `Bodega: ${data.sanityFinanciamientoPage.depa702.bodega}`,
+                `Estacionamiento: ${data.sanityFinanciamientoPage.depa702.estacionamiento}`,
             ],
             espacios2: [
-                'M2 Habitables: 140 m²',
+                `M2 Habitables: ${data.sanityFinanciamientoPage.depa702.m2Habitables}`,
             ],
+    
+            codigoDepa: '702',
+            cajones: '2',
           }
 
 
@@ -701,53 +475,30 @@ const Cotizador = () => {
           const [depaPHA, setDepaPHA] = useState(false);
 
           const depaPHAInfo = {
-              titulo: 'PENTHOUSE A',
-              arr: [
-                'Cocina', 
-                'Alacena', 
-                'Comedor', 
-                'Sala',
-                'Terraza',
-                'Piscina',
-                'Baño completo',
-                'Terraza 2',
-                'Recámara A',
-                'Clóset vestidor A',
-                'Baño A',
-                'Recámara B',
-                'Closet B',
-                'Baño B',
-                'Recámara C',
-                'Closet C',
-                'Recamara D',
-                'Clóset vestidor D',
-                'Baño D',
-                'Cuarto de servicio',
-                'Terraza 1',
-                'Terraza 2',
-              ],
-              plano1: '/depas/PA-PH.png',
-              plano2: '/depas/PB-PH.png',
-              precio: '10,629,600.00',
+              titulo: data.sanityFinanciamientoPage.depaPHA.title,
+              arr: data.sanityFinanciamientoPage.depaPHA.areas,
+              plano1: `${data.sanityFinanciamientoPage.depaPHA.plantaAlta.asset.url}`,
+              plano2: `${data.sanityFinanciamientoPage.depaPHA.plantaBaja.asset.url}`,
+              precio: `${data.sanityFinanciamientoPage.depaPHA.precio}`,
               codigoDepa: 'pha',
-              nivel: '8-9',
+              nivel: `${data.sanityFinanciamientoPage.depaPHA.nivel}`,
               cajones: '3',
-              noTechados: '63.01 m²',
+              noTechados: `${data.sanityFinanciamientoPage.depaPHA.noTechados}`,
               espacios1: [
-                  'Interior planta alta: 123 m²',
-                  'Terraza 1 planta alta: 18.95 m²',
-                  'Terraza 2 planta alta: 9.5 m²',
+                  `Interior planta alta: ${data.sanityFinanciamientoPage.depaPHA.interiorPlantaAlta}`,
+                  `Terraza 1 planta alta: ${data.sanityFinanciamientoPage.depaPHA.terraza1PlantaAlta}`,
+                  `Terraza 2 planta alta: ${data.sanityFinanciamientoPage.depaPHA.terraza2PlantaAlta}`,
               ],
               espacios2: [
-                'Interior planta baja: 60.3 m²',
-                'Terraza 1 planta baja: 50.5 m²',
-                'Terraza 2 planta alta: 32.6 m²',
+                `Interior planta baja: ${data.sanityFinanciamientoPage.depaPHA.interiorPlantaBaja}`,
+              `Terraza 1 planta baja: ${data.sanityFinanciamientoPage.depaPHA.terraza1PlantaBaja}`,
+                `Terraza 2 planta alta: ${data.sanityFinanciamientoPage.depaPHA.terraza2PlantaBaja}`,
               ],
               espacios3: [
-                  'Bodega: 1.8 m²',
-                  'Piscina: 11.35 m²',
-                  'Estacionamiento: 37.5 m²',
-                  'M2 Habitables: 295 m²',
+                  `Bodega: ${data.sanityFinanciamientoPage.depaPHA.bodega}`,
+                  `Piscina: ${data.sanityFinanciamientoPage.depaPHA.piscina}`,
+                  `Estacionamiento: ${data.sanityFinanciamientoPage.depaPHA.estacionamiento}`,
+                  `M2 Habitables: ${data.sanityFinanciamientoPage.depaPHA.m2Habitables}`,
               ],
           }
 
@@ -758,54 +509,32 @@ const Cotizador = () => {
           const [depaPHB, setDepaPHB] = useState(false);
 
           const depaPHBInfo = {
-              titulo: 'PENTHOUSE B',
-              arr: [
-                'Cocina', 
-                'Alacena', 
-                'Comedor', 
-                'Sala',
-                'Terraza',
-                'Piscina',
-                'Baño completo',
-                'Terraza 2',
-                'Recámara A',
-                'Clóset vestidor A',
-                'Baño A',
-                'Recámara B',
-                'Closet B',
-                'Baño B',
-                'Recámara C',
-                'Closet C',
-                'Recamara D',
-                'Clóset vestidor D',
-                'Baño D',
-                'Cuarto de servicio',
-                'Terraza 1',
-                'Terraza 2',
-              ],
-              plano1: '/depas/PA-PH.png',
-              plano2: '/depas/PB-PH.png',
-              precio: '10,629,600.00',
-              codigoDepa: 'phb',
-              nivel: '8-9',
-              cajones: '2',
-              noTechados: '66.68 m²',
-              espacios1: [
-                'Interior planta alta: 123 m²',
-                'Terraza 1 planta alta: 18.95 m²',
-                'Terraza 2 planta alta: 9.5 m²',
+            titulo: data.sanityFinanciamientoPage.depaPHB.title,
+            arr: data.sanityFinanciamientoPage.depaPHB.areas,
+            plano1: `${data.sanityFinanciamientoPage.depaPHB.plantaAlta.asset.url}`,
+            plano2: `${data.sanityFinanciamientoPage.depaPHB.plantaBaja.asset.url}`,
+            precio: `${data.sanityFinanciamientoPage.depaPHB.precio}`,
+            codigoDepa: 'phb',
+            nivel: `${data.sanityFinanciamientoPage.depaPHB.nivel}`,
+            cajones: '3',
+            noTechados: `${data.sanityFinanciamientoPage.depaPHB.noTechados}`,
+            espacios1: [
+                `Interior planta alta: ${data.sanityFinanciamientoPage.depaPHB.interiorPlantaAlta}`,
+                `Terraza 1 planta alta: ${data.sanityFinanciamientoPage.depaPHB.terraza1PlantaAlta}`,
+                `Terraza 2 planta alta: ${data.sanityFinanciamientoPage.depaPHB.terraza2PlantaAlta}`,
             ],
             espacios2: [
-              'Interior planta baja: 60.3 m²',
-              'Terraza 1 planta baja: 50.5 m²',
-              'Terraza 2 planta alta: 32.6 m²',
+              `Interior planta baja: ${data.sanityFinanciamientoPage.depaPHB.interiorPlantaBaja}`,
+            `Terraza 1 planta baja: ${data.sanityFinanciamientoPage.depaPHB.terraza1PlantaBaja}`,
+              `Terraza 2 planta alta: ${data.sanityFinanciamientoPage.depaPHB.terraza2PlantaBaja}`,
             ],
             espacios3: [
-                'Bodega: 1.8 m²',
-                'Piscina: 11.35 m²',
-                'Estacionamiento: 37.5 m²',
-                'M2 Habitables: 295 m²',
+                `Bodega: ${data.sanityFinanciamientoPage.depaPHB.bodega}`,
+                `Piscina: ${data.sanityFinanciamientoPage.depaPHB.piscina}`,
+                `Estacionamiento: ${data.sanityFinanciamientoPage.depaPHB.estacionamiento}`,
+                `M2 Habitables: ${data.sanityFinanciamientoPage.depaPHB.m2Habitables}`,
             ],
+
           }
 
           
@@ -830,26 +559,26 @@ const Cotizador = () => {
                         style={{ height: "100%", width: "100%" }}
                     />
                     <div className='buttons'>
-                        <button onClick={() => setDepa01(!depa01)} className='depa01'>001</button>
-                        <button onClick={() => setDepa02(!depa02)} className='depa02'>002</button>
-                        <button onClick={() => setDepa101(!depa101)} className='depa101'>101</button>
-                        <button onClick={() => setDepa102(!depa102)} className='depa102'>102</button>
-                        <button onClick={() => setDepa201(!depa201)} className='depa201'>201</button>
-                        <button onClick={() => setDepa202(!depa202)} className='depa202'>202</button>
-                        <button onClick={() => setDepa301(!depa301)} className='depa301'>301</button>
-                        <button onClick={() => setDepa302(!depa302)} className='depa302'>302</button>
-                        <button onClick={() => setDepa401(!depa401)} className='depa401'>401</button>
-                        <button onClick={() => setDepa402(!depa402)} className='depa402'>402</button>
-                        <button onClick={() => setDepa501(!depa501)} className='depa501'>501</button>
-                        <button onClick={() => setDepa502(!depa502)} className='depa502'>502</button>
-                        <button onClick={() => setDepa601(!depa601)} className='depa601'>601</button>
-                        <button onClick={() => setDepa602(!depa602)} className='depa602'>602</button>
-                        <button onClick={() => setDepa701(!depa701)} className='depa701'>701</button>
-                        <button onClick={() => setDepa702(!depa702)} className='depa702'>702</button>
-                        <button onClick={() => setDepaPHA(!depaPHA)} className='depaPHA-1'>PHA</button>
-                        <button onClick={() => setDepaPHA(!depaPHA)} className='depaPHA-2'>PHA</button>
-                        <button onClick={() => setDepaPHB(!depaPHB)} className='depaPHB-1'>PHB</button>
-                        <button onClick={() => setDepaPHB(!depaPHB)} className='depaPHB-2'>PHB</button>
+                        <button onClick={() => setDepa01(!depa01)} className={`depa01 ${data.sanityFinanciamientoPage.depa001.disponible === true }`}>001</button>
+                        <button onClick={() => setDepa02(!depa02)} className={`depa02 ${data.sanityFinanciamientoPage.depa002.disponible === true }`}>002</button>
+                        <button onClick={() => setDepa101(!depa101)} className={`depa101 ${data.sanityFinanciamientoPage.depa101.disponible === true }`}>101</button>
+                        <button onClick={() => setDepa102(!depa102)} className={`depa102 ${data.sanityFinanciamientoPage.depa102.disponible === true }`}>102</button>
+                        <button onClick={() => setDepa201(!depa201)} className={`depa201 ${data.sanityFinanciamientoPage.depa201.disponible === true }`}>201</button>
+                        <button onClick={() => setDepa202(!depa202)} className={`depa202 ${data.sanityFinanciamientoPage.depa202.disponible === true }`}>202</button>
+                        <button onClick={() => setDepa301(!depa301)} className={`depa301 ${data.sanityFinanciamientoPage.depa301.disponible === true }`}>301</button>
+                        <button onClick={() => setDepa302(!depa302)} className={`depa302 ${data.sanityFinanciamientoPage.depa302.disponible === true }`}>302</button>
+                        <button onClick={() => setDepa401(!depa401)} className={`depa401 ${data.sanityFinanciamientoPage.depa401.disponible === true }`}>401</button>
+                        <button onClick={() => setDepa402(!depa402)} className={`depa402 ${data.sanityFinanciamientoPage.depa402.disponible === true }`}>402</button>
+                        <button onClick={() => setDepa501(!depa501)} className={`depa501 ${data.sanityFinanciamientoPage.depa501.disponible === true }`}>501</button>
+                        <button onClick={() => setDepa502(!depa502)} className={`depa502 ${data.sanityFinanciamientoPage.depa502.disponible === true }`}>502</button>
+                        <button onClick={() => setDepa601(!depa601)} className={`depa601 ${data.sanityFinanciamientoPage.depa601.disponible === true }`}>601</button>
+                        <button onClick={() => setDepa602(!depa602)} className={`depa602 ${data.sanityFinanciamientoPage.depa602.disponible === true }`}>602</button>
+                        <button onClick={() => setDepa701(!depa701)} className={`depa701 ${data.sanityFinanciamientoPage.depa701.disponible === true }`}>701</button>
+                        <button onClick={() => setDepa702(!depa702)} className={`depa702 ${data.sanityFinanciamientoPage.depa702.disponible === true }`}>702</button>
+                        <button onClick={() => setDepaPHA(!depaPHA)} className={`depaPHA-1 ${data.sanityFinanciamientoPage.depaPHA.disponible === true }`}>PHA</button>
+                        <button onClick={() => setDepaPHA(!depaPHA)} className={`depaPHA-2 ${data.sanityFinanciamientoPage.depaPHA.disponible === true }`}>PHA</button>
+                        <button onClick={() => setDepaPHB(!depaPHB)} className={`depaPHB-1 ${data.sanityFinanciamientoPage.depaPHB.disponible === true }`}>PHB</button>
+                        <button onClick={() => setDepaPHB(!depaPHB)} className={`depaPHB-2 ${data.sanityFinanciamientoPage.depaPHB.disponible === true }`}>PHB</button>
                     </div>
                 </div>
             </motion.div>
@@ -859,27 +588,26 @@ const Cotizador = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
             >
-                <h2>FINANCIAMIENTO</h2>
-                <div className='datos'>
-                    <div className='item'>
-                        <h2>$20,000</h2>
-                        <p>para apartar la unidad</p>
-                    </div>
-                    <div className='item'>
-                        <h2>15%</h2>
-                        <p>enganche</p>
-                    </div>
-                    <div className='item'>
-                        <h2>35%</h2>
-                        <p>diferido</p>
-                    </div>
-                    <div className='item'>
-                        <h2>50%</h2>
-                        <p>saldo contra entrega</p>
-                    </div>
-                </div>
+                <h2>{data.sanityFinanciamientoPage.title}</h2>
+                <ul className='datos'>
+
+
+
+                {data.sanityFinanciamientoPage.items.map((item) => {
+                    
+                                return (
+                                    <li className='item'>
+                                        <h2>{item.title}</h2>
+                                        <p>{item.description}</p>
+                                    </li>
+                                )
+                            })}
+
+
+
+                </ul>
                 <div className='counter'>
-                    <App />
+                    <App date={data.sanityFinanciamientoPage.date} />
                 </div>
             </motion.div>
 
@@ -1044,143 +772,129 @@ const CotizadorContainer = styled.section`
                         opacity: 0.7;
                     }
                 }
+                .true {
+                    background-color: #808642;
+                }
+                .false {
+                    background-color: #9E4C3B;
+                }
                 .depa01 {
                     width: 109px;
                     height: 44px;
-                    background-color: #808642;
                     right: 55px;
                     bottom: 13px;
                 }
                 .depa02 {
                     width: 109px;
                     height: 44px;
-                    background-color: #808642;
                     left: 50px;
                     bottom: 13px;
                 }
                 .depa101 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
                     right: 55px;
                     bottom: 60px;
                 }
                 .depa102 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
                     left: 50px;
                     bottom: 60px;
                 }
                 .depa201 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
                     right: 55px;
                     bottom: 104px;
                 }
                 .depa202 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
                     left: 50px;
                     bottom: 104px;
                 }
                 .depa301 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
                     right: 55px;
                     bottom: 147px;
                 }
                 .depa302 {
                     width: 109px;
                     height: 38px;
-                    background-color: #9E4C3B;
                     left: 50px;
                     bottom: 147px;
                 }
                 .depa401 {
                     width: 109px;
                     height: 38px;
-                    background-color: #9E4C3B;
                     right: 55px;
                     bottom: 191px;
                 }
                 .depa402 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
                     left: 50px;
                     bottom: 191px;
                 }
                 .depa501 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
                     right: 55px;
                     bottom: 234px;
                 }
                 .depa502 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
                     left: 50px;
                     bottom: 234px;
                 }
                 .depa601 {
                     width: 109px;
                     height: 38px;
-                    background-color: #9E4C3B;
                     right: 55px;
                     bottom: 280px;
                 }
                 .depa602 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
                     left: 50px;
                     bottom: 280px;
                 }
                 .depa701 {
                     width: 109px;
                     height: 38px;
-                    background-color: #808642;
                     right: 55px;
                     bottom: 322px;
                 }
                 .depa702 {
                     width: 109px;
                     height: 38px;
-                    background-color: #9E4C3B;
                     left: 50px;
                     bottom: 322px;
                 }
                 .depaPHA-1 {
                     width: 109px;
                     height: 38px;
-                    background-color: #9E4C3B;
                     right: 55px;
                     bottom: 366px;
                 }
                 .depaPHA-2 {
                     width: 109px;
                     height: 38px;
-                    background-color: #9E4C3B;
                     right: 55px;
                     bottom: 409px;
                 }
                 .depaPHB-1 {
                     width: 109px;
                     height: 38px;
-                    background-color: #9E4C3B;
                     left: 50px;
                     bottom: 366px;
                 }
                 .depaPHB-2 {
                     width: 109px;
                     height: 38px;
-                    background-color: #9E4C3B;
                     left: 50px;
                     bottom: 409px;
                 }

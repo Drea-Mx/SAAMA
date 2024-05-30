@@ -32,7 +32,7 @@ export default {
             title: 'Date',
             type: 'date',
             options: {
-                dateFormat: 'YYYY-MM-DD',
+                dateFormat: 'MMMM, DD, YYYY',
                 calendarTodayLabel: 'Today'
               }
         },

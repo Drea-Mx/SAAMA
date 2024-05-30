@@ -1,23 +1,36 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const Amenidades = () => {
+const Amenidades = ({data}) => {
+
+    const iconoGetDataImage = getImage(data.sanityAmenidadesPage.icono && data.sanityAmenidadesPage.icono.asset)
+    const iconoGetDataImageAlt = data.sanityAmenidadesPage.icono && data.sanityAmenidadesPage.icono.alt
+
+    const imageGetDataImage = getImage(data.sanityAmenidadesPage.imagenAmenidades && data.sanityAmenidadesPage.imagenAmenidades.asset)
+    const imageGetDataImageAlt = data.sanityAmenidadesPage.imagenAmenidades && data.sanityAmenidadesPage.imagenAmenidades.alt
+
 
 
 
     return(
         <UbicacionContainer>
-            <img className="icono" src='/iconoDark.svg' alt="Pertenece, Explorando" />
+            <div className="icono">
+                <GatsbyImage
+                    class="welcome"
+                    style={{ height: "100%", width: "100%" }}
+                    image={iconoGetDataImage}
+                    alt={iconoGetDataImageAlt}
+                />
+            </div>
             
             <div className="mapa">
-                <StaticImage 
-                    src="amenidades02.jpg" 
-                    alt="SAAMA Departamentos" 
-                    layout="fullWidth"
-                    placeholder="blurred"
+                <GatsbyImage
+                    class="welcome"
                     style={{ height: "100%", width: "100%" }}
+                    image={imageGetDataImage}
+                    alt={imageGetDataImageAlt}
                 />
                 <div className="numeros">
                     <div className="item terraza">
@@ -164,6 +177,7 @@ const UbicacionContainer = styled.section`
     }
     .icono {
         width: 66px;
+        margin: 0 auto;
         @media (max-width: 780px) {
             width: 40px;
             position: relative;
