@@ -1,10 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
 import { Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import BlockContent from '@sanity/block-content-to-react';
 
-const Concepto = () => {
+
+const Concepto = ({data}) => {
+
+    const textGetDataImage = getImage(data.sanityConceptoPage.headline && data.sanityConceptoPage.headline.asset)
+    const textGetDataImageAlt = data.sanityConceptoPage.headline && data.sanityConceptoPage.headline.alt
+
+    const imageGetDataImage = getImage(data.sanityConceptoPage.image && data.sanityConceptoPage.image.asset)
+    const imageGetDataImageAlt = data.sanityConceptoPage.image && data.sanityConceptoPage.image.alt
+
     return(
         <ConceptoContainer>
             <motion.div  
@@ -14,15 +23,17 @@ const Concepto = () => {
                 transition={{ duration: 0.5 }}
             >
                 <div className="iz">
-                        <img src='/pertenece.svg' alt="Pertenece, Explorando" />
+                    <GatsbyImage
+                        class="welcome"
+                        style={{ height: "100%", width: "100%" }}
+                        image={textGetDataImage}
+                        alt={textGetDataImageAlt}
+                    />
                 </div>
                 <div className="de">
-                    <p>SAĀMA, palabra de origen tailándes.</p>
-                    <p>Proviene de “Sam Nak” que signiﬁca <strong>Residencia</strong></p>
-                    <br />
-                    <br />
-                    <p>Un nuevo espacio para conectar, construir comunidades</p>
-                    <p>y encontrarse rodeado de la naturaleza. </p>
+                    <BlockContent
+                        blocks={data.sanityConceptoPage._rawText}
+                    />
                 </div>
             </motion.div>
             <motion.div  
@@ -31,13 +42,12 @@ const Concepto = () => {
                 animate={{ y: '0', scale: 1 }}
                 transition={{ delay: .5, duration: 1 }}
             >
-                <StaticImage 
-                    src="../../assets/images/conjunto.webp" 
-                    alt="SAAMA Departamentos" 
-                    layout="fullWidth"
-                    placeholder="blurred"
-                    style={{ height: "100%", width: "100%" }}
-                />
+                <GatsbyImage
+                        class="welcome"
+                        style={{ height: "100%", width: "100%" }}
+                        image={imageGetDataImage}
+                        alt={imageGetDataImageAlt}
+                    />
                 
             </motion.div>
 

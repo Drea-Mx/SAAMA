@@ -2,12 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import Parser from 'html-react-parser';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import { StaticImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const UbicacionComponent = () => {
 
-    const mapa = '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14865.070399808581!2d-89.2959375!3d21.3399375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x85f3ad652a48380d!2sSAAMA%20-%20Departamentos%20Telchac!5e0!3m2!1ses!2smx!4v1668109812734!5m2!1ses!2smx" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+const UbicacionComponent = ({data}) => {
+
+    const mapa = data.sanityUbicacionPage.mapa
+
+    const imageGetDataImage = getImage(data.sanityUbicacionPage.image && data.sanityUbicacionPage.image.asset)
+    const imageGetDataImageAlt = data.sanityUbicacionPage.image && data.sanityUbicacionPage.image.alt
+
+
+
     return(
         <UbicacionContainer>
                 <motion.div  
@@ -18,25 +25,25 @@ const UbicacionComponent = () => {
             >
                 <div className="iz">
                     <div className="image">
-                        <StaticImage 
-                            src="../../assets/images/ubicacion/ubicacion.jpg" 
-                            alt="SAAMA Departamentos" 
-                            layout="fullWidth"
-                            placeholder="blurred"
+                        <GatsbyImage
+                            class="welcome"
                             style={{ height: "100%", width: "100%" }}
+                            image={imageGetDataImage}
+                            alt={imageGetDataImageAlt}
                         />
                     </div>
                 </div>
                 <div className="de">
                     <div className="info">
-                        <h2>Puntos <br/>de interés</h2>
+                        <h2>{data.sanityUbicacionPage.headline1} <br/>{data.sanityUbicacionPage.headline2}</h2>
                         <ul>
-                            <li>Puerto Progreso</li>
-                            <li>Laguna rosada</li>
-                            <li>Telchac Puerto</li>
-                            <li>X'Cambó</li>
-                            <li>Ciudad de Mérida</li>
-                            <li>Marinas</li>
+
+                            {data.sanityUbicacionPage.puntosDeInteres.map((punto, index) => {
+                                
+                                return (
+                                    <li key={index}>{punto}</li>
+                                )
+                            })}
                         </ul>
                     </div>
                     <div className="map">

@@ -2,17 +2,52 @@ import React from "react";
 import Concepto from "../components/concepto/Concepto";
 import Layout from '../components/layout/layout'
 import { Seo } from '../components/layout/seo';
+import { graphql } from "gatsby";
 
+export const data = graphql`
+  query {
+    sanityConceptoPage {
+        headline {
+        alt
+        asset {
+            gatsbyImageData(
+            layout: FULL_WIDTH
+            outputPixelDensities: 1.5
+            placeholder: BLURRED
+            )
+        }
+        }
+        _rawText
+        image {
+        alt
+        asset {
+            gatsbyImageData(
+            layout: FULL_WIDTH
+            outputPixelDensities: 1.5
+            placeholder: BLURRED
+            )
+        }
+        }
+        seo {
+        title
+        description
+        image {
+            asset {
+            gatsbyImageData
+            }
+        }
+        }
+    }
+  }
+`;
 
-
-
-const ConceptoPage = () => {
+const ConceptoPage = ({data}) => {
 
 
     
     return(
         <Layout>
-            <Concepto />
+            <Concepto data={data} />
         </Layout>
     )
 }

@@ -2,9 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const Home = () => {
+const Home = ({data}) => {
+
+    const iconGetDataImage = getImage(data.sanityHomePage.headline && data.sanityHomePage.headline.asset)
+    const iconGetDataImageAlt = data.sanityHomePage.headline && data.sanityHomePage.headline.alt
+
+
+
     return(
         <HomeContainer>
             <motion.div  
@@ -13,18 +19,16 @@ const Home = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
             >
-                <StaticImage
-                    className="movil"
-                    src="../../assets/images/homeImage.png"
-                    alt="SAAMA"
-                    placeholder="blurred"
-                    layout="FULL_WIDTH"
-                    style={{ height: "100%", width: "100%" }}
-                />
+                
                 <video autoPlay loop muted playsInline>
                     <source src="/video.mp4" type="video/mp4" />
                 </video>
-                <img className="welcome" src="/welcome.svg" alt="Welcome Home" />
+                <GatsbyImage
+                    class="welcome"
+                    style={{ height: "100%", width: "100%" }}
+                    image={iconGetDataImage}
+                    alt={iconGetDataImageAlt}
+                />
 
             </motion.div>
             <motion.div
@@ -32,8 +36,8 @@ const Home = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 0.5 }}
             >
-                <h2>DEPARTAMENTOS DESDE 7.3 MDP</h2>
-                <h2>ENTREGA SEPTIEMBRE 2025</h2>
+                <h2>{data.sanityHomePage.text1}</h2>
+                <h2>{data.sanityHomePage.text2}</h2>
                 <AniLink cover bg="#2E331E" direction="up" to='/concepto'>
                 ↓
                 </AniLink>

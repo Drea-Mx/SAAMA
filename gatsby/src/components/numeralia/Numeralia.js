@@ -1,10 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image"
 import { motion } from "framer-motion"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import BlockContent from '@sanity/block-content-to-react';
 
-const Numeralia = () => {
+const Numeralia = ({data}) => {
+
+    const textGetDataImage = getImage(data.sanityNumeraliaPage.headline && data.sanityNumeraliaPage.headline.asset)
+    const textGetDataImageAlt = data.sanityNumeraliaPage.headline && data.sanityNumeraliaPage.headline.alt
+
+    const imageGetDataImage = getImage(data.sanityNumeraliaPage.image && data.sanityNumeraliaPage.image.asset)
+    const imageGetDataImageAlt = data.sanityNumeraliaPage.image && data.sanityNumeraliaPage.image.alt
 
     return(
         <UbicacionContainer>
@@ -16,24 +23,25 @@ const Numeralia = () => {
             >
                 <div className="iz">
                     <div className="image">
-                        <StaticImage 
-                            src="../../assets/images/FACHADA_FUGADA.webp" 
-                            alt="SAAMA Departamentos" 
-                            layout="fullWidth"
-                            placeholder="blurred"
+                        <GatsbyImage
+                            class="welcome"
                             style={{ height: "100%", width: "100%" }}
+                            image={imageGetDataImage}
+                            alt={imageGetDataImageAlt}
                         />
                     </div>
                 </div>
                 <div className="de">
-                    <img src="/beach.svg" alt="Beachfront living" />
-                    <p>La torre cuenta con 16 departamentos y 2 penthouse</p>
-                    <p>ubicados en la parte más alta.</p>
-                    <br />
-                    <br />
-                    <p>En total SAĀMA tiene 3,548 m2 de construcción,</p>
-                    <p>distribuidos en un desarrollo de 10 niveles</p>
-                    <p>con más de 14 amenidades</p>
+                    <GatsbyImage
+                        class="img"
+                        image={textGetDataImage}
+                        alt={textGetDataImageAlt}
+                    />
+                    <div className="text">
+                        <BlockContent
+                            blocks={data.sanityNumeraliaPage._rawText}
+                        />
+                    </div>
                 </div>
             </motion.div>
             <AniLink cover bg="#2E331E" direction="up" to='/amenidades'>
@@ -91,7 +99,7 @@ const UbicacionContainer = styled.section`
                 width: 100%;
                 padding: 20px;
             }
-                img {
+                .img {
                     margin-bottom: 50px;
                 }
             p {
